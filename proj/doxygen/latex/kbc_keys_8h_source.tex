@@ -1,0 +1,66 @@
+\hypertarget{kbc_keys_8h_source}{}\doxysection{kbc\+Keys.\+h}
+\label{kbc_keys_8h_source}\index{C:/Users/Rui Andrade/Documents/MINIX-\/LCOM/Minix Shared Folder/g04/proj/src/kbcKeys.h@{C:/Users/Rui Andrade/Documents/MINIX-\/LCOM/Minix Shared Folder/g04/proj/src/kbcKeys.h}}
+\mbox{\hyperlink{kbc_keys_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef \_KBC\_KEYS\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define \_KBC\_KEYS\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{comment}{/*}}
+\DoxyCodeLine{5 \textcolor{comment}{ * enum KEY}}
+\DoxyCodeLine{6 \textcolor{comment}{ * @brief used for the different keys of the keyboard}}
+\DoxyCodeLine{7 \textcolor{comment}{ */}}
+\DoxyCodeLine{8 \textcolor{keyword}{enum} \mbox{\hyperlink{kbc_keys_8h_a6ae70ce7b1b294c469f11cbabb8f30d6}{KEY}}\{}
+\DoxyCodeLine{9   \mbox{\hyperlink{kbc_keys_8h_a6ae70ce7b1b294c469f11cbabb8f30d6aba595d8bca8bc5e67c37c0a9d89becfa}{UP}},}
+\DoxyCodeLine{10   \mbox{\hyperlink{kbc_keys_8h_a6ae70ce7b1b294c469f11cbabb8f30d6a9b0b4a95b99523966e0e34ffdadac9da}{DOWN}},}
+\DoxyCodeLine{11   \mbox{\hyperlink{kbc_keys_8h_a6ae70ce7b1b294c469f11cbabb8f30d6adb45120aafd37a973140edee24708065}{LEFT}},}
+\DoxyCodeLine{12   \mbox{\hyperlink{kbc_keys_8h_a6ae70ce7b1b294c469f11cbabb8f30d6aec8379af7490bb9eaaf579cf17876f38}{RIGHT}},}
+\DoxyCodeLine{13   \mbox{\hyperlink{kbc_keys_8h_a6ae70ce7b1b294c469f11cbabb8f30d6a951ab68bb8f7daafb78951107080904e}{ENTER}},}
+\DoxyCodeLine{14   \mbox{\hyperlink{kbc_keys_8h_a6ae70ce7b1b294c469f11cbabb8f30d6af5297152557c7da396243000ca240e89}{ESC}},}
+\DoxyCodeLine{15 \};}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{comment}{/*}}
+\DoxyCodeLine{18 \textcolor{comment}{ * enum STATE}}
+\DoxyCodeLine{19 \textcolor{comment}{ * @brief events of the game, allows to easily switch between states}}
+\DoxyCodeLine{20 \textcolor{comment}{ */}}
+\DoxyCodeLine{21 \textcolor{keyword}{enum} \mbox{\hyperlink{kbc_keys_8h_a275a67132f10277ada3a0ee3d616b647}{STATE}}\{}
+\DoxyCodeLine{22   \mbox{\hyperlink{kbc_keys_8h_a275a67132f10277ada3a0ee3d616b647a56b36d0d0bb01b339cf1041adc08e262}{PAUSE}},}
+\DoxyCodeLine{23   \mbox{\hyperlink{kbc_keys_8h_a275a67132f10277ada3a0ee3d616b647a4c40e60bc71a32b924ce1f08d57f9721}{MENU}},}
+\DoxyCodeLine{24   \mbox{\hyperlink{kbc_keys_8h_a275a67132f10277ada3a0ee3d616b647abfb2b5ad5c3b8af5ae22970903f4c462}{PLAY\_SOLO}},}
+\DoxyCodeLine{25   \mbox{\hyperlink{kbc_keys_8h_a275a67132f10277ada3a0ee3d616b647aaceb40ea891981b98acac2a80f104cc1}{PLAY\_MULTIPLAYER}},}
+\DoxyCodeLine{26   \mbox{\hyperlink{kbc_keys_8h_a275a67132f10277ada3a0ee3d616b647a11fd9ca455f92c69c084484d5cd803c2}{DEAD}},}
+\DoxyCodeLine{27   \mbox{\hyperlink{kbc_keys_8h_a275a67132f10277ada3a0ee3d616b647a7a10b5d68d31711288e1fe0fa17dbf4f}{EXIT}},}
+\DoxyCodeLine{28   \mbox{\hyperlink{kbc_keys_8h_a275a67132f10277ada3a0ee3d616b647a8ac6a0bc60a7a5faad394dc988be36eb}{LEADERBOARD}},}
+\DoxyCodeLine{29 \};}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \textcolor{comment}{/*}}
+\DoxyCodeLine{32 \textcolor{comment}{ * struct: mouseInfo}}
+\DoxyCodeLine{33 \textcolor{comment}{ * @brief used to save the mouse information}}
+\DoxyCodeLine{34 \textcolor{comment}{ * @param rb}}
+\DoxyCodeLine{35 \textcolor{comment}{ * @param mb}}
+\DoxyCodeLine{36 \textcolor{comment}{ * @param lb}}
+\DoxyCodeLine{37 \textcolor{comment}{ * @param delta\_x}}
+\DoxyCodeLine{38 \textcolor{comment}{ * @param delta\_y}}
+\DoxyCodeLine{39 \textcolor{comment}{ */}}
+\DoxyCodeLine{40 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structmouse_info__t}{mouseInfo\_t}}}
+\DoxyCodeLine{41 \{}
+\DoxyCodeLine{42   \textcolor{keywordtype}{bool} \mbox{\hyperlink{structmouse_info__t_a8f5876c96ad71b810acc0be0e13d5002}{rb}}, \mbox{\hyperlink{structmouse_info__t_a2585a65f142341d4d740d78311e16c21}{mb}}, \mbox{\hyperlink{structmouse_info__t_ac5cf8d0fb0fdd62c4d84e838a7ca8732}{lb}}; }
+\DoxyCodeLine{43   int16\_t \mbox{\hyperlink{structmouse_info__t_a7bcf679cb5d17f7878f49f2344c58fae}{delta\_x}};  }
+\DoxyCodeLine{44   int16\_t \mbox{\hyperlink{structmouse_info__t_a25f09569d8ed45d16951fa5ffcc423af}{delta\_y}};}
+\DoxyCodeLine{45 \} \mbox{\hyperlink{kbc_keys_8h_af3227f612ec43c954504384a3de25a53}{mouseInfo}};}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{comment}{/*}}
+\DoxyCodeLine{48 \textcolor{comment}{ * struct: Character}}
+\DoxyCodeLine{49 \textcolor{comment}{ * @brief used to save the information of a font char}}
+\DoxyCodeLine{50 \textcolor{comment}{ * @param x}}
+\DoxyCodeLine{51 \textcolor{comment}{ * @param y}}
+\DoxyCodeLine{52 \textcolor{comment}{ * @param letter}}
+\DoxyCodeLine{53 \textcolor{comment}{ */}}
+\DoxyCodeLine{54 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structcharacter__t}{character\_t}} \{}
+\DoxyCodeLine{55   \textcolor{keywordtype}{int} \mbox{\hyperlink{structcharacter__t_a18e4ee6e2dffa65646a03f1f6586630e}{x}};}
+\DoxyCodeLine{56   \textcolor{keywordtype}{int} \mbox{\hyperlink{structcharacter__t_a762546fba9cbf6c498c7e4a51a32f0bf}{y}};}
+\DoxyCodeLine{57   \textcolor{keywordtype}{int} \mbox{\hyperlink{structcharacter__t_ae1fc4520ec9a0272119996adc9230457}{letter}};}
+\DoxyCodeLine{58 \}\mbox{\hyperlink{kbc_keys_8h_ab0a8e61dcfdccf29000580179ab166b9}{Character}};}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

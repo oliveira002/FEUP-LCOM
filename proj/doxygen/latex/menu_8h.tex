@@ -1,0 +1,222 @@
+\hypertarget{menu_8h}{}\doxysection{C\+:/\+Users/\+Rui Andrade/\+Documents/\+MINIX-\/\+LCOM/\+Minix Shared Folder/g04/proj/src/menu.h File Reference}
+\label{menu_8h}\index{C:/Users/Rui Andrade/Documents/MINIX-\/LCOM/Minix Shared Folder/g04/proj/src/menu.h@{C:/Users/Rui Andrade/Documents/MINIX-\/LCOM/Minix Shared Folder/g04/proj/src/menu.h}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$xpms/play\+Part.\+xpm$>$}\newline
+{\ttfamily \#include $<$xpms/exit\+Part.\+xpm$>$}\newline
+{\ttfamily \#include \char`\"{}kbc\+Keys.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$xpms/leader\+Part.\+xpm$>$}\newline
+{\ttfamily \#include $<$xpms/menu.\+xpm$>$}\newline
+{\ttfamily \#include $<$xpms/mouse\+Cursor.\+xpm$>$}\newline
+{\ttfamily \#include \char`\"{}devices/graphics.\+h\char`\"{}}\newline
+Include dependency graph for menu.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{menu_8h_a64b931c2acaf457214dad0317d91b2c8}{Menu\+Mouse\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em checks the mouse position and chooses the option that it\textquotesingle{}s hovering if clicked on \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8h_a0533d8a17655a42328d57d705e7759d1}{Menu\+Timer\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em refreshes the menu screen with the update mouse position \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8h_aa13653318c21b0e6b86838e6091bfc9a}{draw\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em draws with the selected option highlighted \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8h_af8d7cbfa968959baff86edbd3ca36c01}{draw\+Cursor}} ()
+\begin{DoxyCompactList}\small\item\em draws mouse cursor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8h_abd24e9d6431234da5e2a5bdca2e0e2f7}{draw\+Def\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em draws background of menu \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8h_a0921c0ead7a0407b4bb3ab368b790efb}{clean\+Menu\+BG}} ()
+\begin{DoxyCompactList}\small\item\em erases the text and cursor from the menu \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8h_ab813c6f8436492261f3869d21ded2f17}{change\+State}} ()
+\begin{DoxyCompactList}\small\item\em changes gamestate depending on the selected option \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{menu_8h_ab813c6f8436492261f3869d21ded2f17}\label{menu_8h_ab813c6f8436492261f3869d21ded2f17}} 
+\index{menu.h@{menu.h}!changeState@{changeState}}
+\index{changeState@{changeState}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{changeState()}{changeState()}}
+{\footnotesize\ttfamily void change\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+changes gamestate depending on the selected option 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8h_ab813c6f8436492261f3869d21ded2f17_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{menu_8h_a0921c0ead7a0407b4bb3ab368b790efb}\label{menu_8h_a0921c0ead7a0407b4bb3ab368b790efb}} 
+\index{menu.h@{menu.h}!cleanMenuBG@{cleanMenuBG}}
+\index{cleanMenuBG@{cleanMenuBG}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{cleanMenuBG()}{cleanMenuBG()}}
+{\footnotesize\ttfamily void clean\+Menu\+BG (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+erases the text and cursor from the menu 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8h_a0921c0ead7a0407b4bb3ab368b790efb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8h_a0921c0ead7a0407b4bb3ab368b790efb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{menu_8h_af8d7cbfa968959baff86edbd3ca36c01}\label{menu_8h_af8d7cbfa968959baff86edbd3ca36c01}} 
+\index{menu.h@{menu.h}!drawCursor@{drawCursor}}
+\index{drawCursor@{drawCursor}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{drawCursor()}{drawCursor()}}
+{\footnotesize\ttfamily void draw\+Cursor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+draws mouse cursor 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8h_af8d7cbfa968959baff86edbd3ca36c01_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8h_af8d7cbfa968959baff86edbd3ca36c01_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{menu_8h_abd24e9d6431234da5e2a5bdca2e0e2f7}\label{menu_8h_abd24e9d6431234da5e2a5bdca2e0e2f7}} 
+\index{menu.h@{menu.h}!drawDefMenu@{drawDefMenu}}
+\index{drawDefMenu@{drawDefMenu}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{drawDefMenu()}{drawDefMenu()}}
+{\footnotesize\ttfamily void draw\+Def\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+draws background of menu 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8h_abd24e9d6431234da5e2a5bdca2e0e2f7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8h_abd24e9d6431234da5e2a5bdca2e0e2f7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{menu_8h_aa13653318c21b0e6b86838e6091bfc9a}\label{menu_8h_aa13653318c21b0e6b86838e6091bfc9a}} 
+\index{menu.h@{menu.h}!drawMenu@{drawMenu}}
+\index{drawMenu@{drawMenu}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{drawMenu()}{drawMenu()}}
+{\footnotesize\ttfamily void draw\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+draws with the selected option highlighted 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8h_aa13653318c21b0e6b86838e6091bfc9a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8h_aa13653318c21b0e6b86838e6091bfc9a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{menu_8h_a64b931c2acaf457214dad0317d91b2c8}\label{menu_8h_a64b931c2acaf457214dad0317d91b2c8}} 
+\index{menu.h@{menu.h}!MenuMouseHandler@{MenuMouseHandler}}
+\index{MenuMouseHandler@{MenuMouseHandler}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{MenuMouseHandler()}{MenuMouseHandler()}}
+{\footnotesize\ttfamily void Menu\+Mouse\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+checks the mouse position and chooses the option that it\textquotesingle{}s hovering if clicked on 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{menu_8h_a64b931c2acaf457214dad0317d91b2c8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8h_a64b931c2acaf457214dad0317d91b2c8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{menu_8h_a0533d8a17655a42328d57d705e7759d1}\label{menu_8h_a0533d8a17655a42328d57d705e7759d1}} 
+\index{menu.h@{menu.h}!MenuTimerHandler@{MenuTimerHandler}}
+\index{MenuTimerHandler@{MenuTimerHandler}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{MenuTimerHandler()}{MenuTimerHandler()}}
+{\footnotesize\ttfamily void Menu\+Timer\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+refreshes the menu screen with the update mouse position 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8h_a0533d8a17655a42328d57d705e7759d1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8h_a0533d8a17655a42328d57d705e7759d1_icgraph}
+\end{center}
+\end{figure}

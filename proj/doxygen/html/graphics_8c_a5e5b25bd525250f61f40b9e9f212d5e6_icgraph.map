@@ -1,0 +1,6 @@
+<map id="vg_draw_hline" name="vg_draw_hline">
+<area shape="rect" id="node1" title=" " alt="" coords="340,31,443,57"/>
+<area shape="rect" id="node2" href="$graphics_8c.html#a99d2da2559e11200c6b40c469e9977ec" title=" " alt="" coords="164,31,292,57"/>
+<area shape="rect" id="node3" href="$graphics_8c.html#a1559628d6c717b11b21455eaeeffe06b" title="Clears the XPM on the screen by paiting the background." alt="" coords="7,5,114,32"/>
+<area shape="rect" id="node4" href="$graphics_8c.html#a3d637ba6438c3c79c0eafe641a2637d4" title="draws the pallete for indexed mode" alt="" coords="5,56,116,83"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="drawScore" name="drawScore">
+<area shape="rect" id="node1" title="Function responsible for drawing the current score of the user on the screen." alt="" coords="5,31,88,57"/>
+<area shape="rect" id="node2" href="$graphics_8c.html#a98bdad3662edea366e432270b278cc4b" title="Clears the XPM on the screen by paiting the background." alt="" coords="159,5,231,32"/>
+<area shape="rect" id="node4" href="$graphics_8c.html#a3111ea21013ad9656c7795b4d491b984" title="Draws a letter/number from the XPM of the font used." alt="" coords="136,56,253,83"/>
+<area shape="rect" id="node3" href="$graphics_8c.html#a08c498ffeb0a3962e3b7711b57397741" title=" " alt="" coords="301,31,404,57"/>
+</map>

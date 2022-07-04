@@ -1,0 +1,9 @@
+<map id="PauseIH" name="PauseIH">
+<area shape="rect" id="node1" title=" " alt="" coords="5,56,76,83"/>
+<area shape="rect" id="node2" href="$pause_8c.html#a54e1e892c6677c35be1f65110908f206" title="is responsible for keeping track of the selected options and changes gamestate if it is chosen" alt="" coords="126,5,257,32"/>
+<area shape="rect" id="node3" href="$pause_8c.html#a4eae9a915fdabd3b7ce5da6ba01eb9f4" title="calls function that draws highlighted option if there is any" alt="" coords="124,56,259,83"/>
+<area shape="rect" id="node7" href="$game_8c.html#a85c95f0f803cb3ce36affb5c221a0b5f" title=" " alt="" coords="147,107,235,133"/>
+<area shape="rect" id="node4" href="$pause_8c.html#a6fd7f58fd5b1307fedba51ee0c61adb4" title="draws highlighted option" alt="" coords="307,56,393,83"/>
+<area shape="rect" id="node5" href="$graphics_8c.html#a496843f365959ef8c821e47493dc6be7" title="Draws the XPM on the screen." alt="" coords="441,56,547,83"/>
+<area shape="rect" id="node6" href="$graphics_8c.html#a08c498ffeb0a3962e3b7711b57397741" title=" " alt="" coords="595,56,697,83"/>
+</map>

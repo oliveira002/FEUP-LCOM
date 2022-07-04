@@ -1,0 +1,4 @@
+<map id="GameOverLeaderBoard" name="GameOverLeaderBoard">
+<area shape="rect" id="node1" title="Updates the gameState to DEAD, and writes on the leaderboard the score." alt="" coords="5,5,161,32"/>
+<area shape="rect" id="node2" href="$leaderboard_8c.html#a4d12823d0777d6ea86f3c6d948cc5fb8" title=" " alt="" coords="209,5,299,32"/>
+</map>

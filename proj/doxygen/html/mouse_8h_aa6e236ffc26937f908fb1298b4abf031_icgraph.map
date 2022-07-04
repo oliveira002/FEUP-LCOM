@@ -1,0 +1,5 @@
+<map id="send_mouse_cmd" name="send_mouse_cmd">
+<area shape="rect" id="node1" title="checks for errors and sends the mouse&#39;s command" alt="" coords="352,13,480,39"/>
+<area shape="rect" id="node2" href="$mouse_8c.html#a7e311379d4d64f88873ef8ade5c82a25" title="disables mouse&#39;s data reporting" alt="" coords="163,5,304,47"/>
+<area shape="rect" id="node3" href="$proj_8c.html#a2a16f651eccbd248e1ad3b3b924b143b" title=" " alt="" coords="5,13,115,39"/>
+</map>

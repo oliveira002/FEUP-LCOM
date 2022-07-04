@@ -1,0 +1,43 @@
+\hypertarget{i8042_8h_source}{}\doxysection{i8042.\+h}
+\label{i8042_8h_source}\index{C:/Users/Rui Andrade/Documents/MINIX-\/LCOM/Minix Shared Folder/g04/proj/src/devices/i8042.h@{C:/Users/Rui Andrade/Documents/MINIX-\/LCOM/Minix Shared Folder/g04/proj/src/devices/i8042.h}}
+\mbox{\hyperlink{i8042_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef \_I8042\_}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define \_I8042\_}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <lcom/lcf.h>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define STAT\_REG 0x64}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#define OUT\_BUF 0x60}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#define WRITE\_BYTE 0xD4}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define WRITE\_PORT 0x60}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#define DISABLE\_DATA 0xF5}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#define INT  BIT(0)}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#define IRQ\_KB 1}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#define ERROR\_PARITY\_TIMEOUT  (BIT(6) | BIT(7))}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#define WAIT\_KBC    20000}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#define KBC\_OBF  BIT(0)}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#define KBC\_AUX  BIT(5)}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define DEFSCAN 0xe0}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#define ESCSCAN 0x81}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#define OBF\_AUX  (BIT(0) | BIT(5))}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#define IRQ\_MOUSE 12}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#define IBF\_BIT BIT(1)}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{comment}{// defs for packet}}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#define LEFT\_BUTTON BIT(0)}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#define RIGHT\_BUTTON BIT(1)}}
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#define MIDDLE\_BUTTON BIT(2)}}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#define X\_SIGN BIT(4)}}
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#define Y\_SIGN BIT(5)}}
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#define X\_OVERFLOW BIT(6)}}
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#define Y\_OVERFLOW BIT(7)}}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#define ACK 0xFA  }}
+\DoxyCodeLine{34 \textcolor{preprocessor}{\#define NACK 0xFE }}
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#define ERROR 0xFC }}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

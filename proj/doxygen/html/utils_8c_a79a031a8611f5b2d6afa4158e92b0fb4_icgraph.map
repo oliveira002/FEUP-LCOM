@@ -1,0 +1,13 @@
+<map id="util_sys_inb" name="util_sys_inb">
+<area shape="rect" id="node1" title=" " alt="" coords="708,132,799,159"/>
+<area shape="rect" id="node2" href="$mouse_8c.html#a556859d2c63ddd3236d64d2fc0e01e4c" title="checks mouse status to see if its input buffer is full" alt="" coords="549,5,649,32"/>
+<area shape="rect" id="node3" href="$mouse_8c.html#aa6e236ffc26937f908fb1298b4abf031" title="checks for errors and sends the mouse&#39;s command" alt="" coords="357,56,485,83"/>
+<area shape="rect" id="node6" href="$keyboard_8c.html#aa9f74ccfbf69e0d4441dbe94994874bf" title="restores the interrupts after polling" alt="" coords="539,107,660,133"/>
+<area shape="rect" id="node7" href="$keyboard_8c.html#aea970a154161a35f6894898a092ed70a" title="checks keyboard status for errors" alt="" coords="569,157,629,184"/>
+<area shape="rect" id="node9" href="$mouse_8c.html#a210374b50462acdedab00df64d5cea3c" title="checks mouse status for errors" alt="" coords="560,208,639,235"/>
+<area shape="rect" id="node10" href="$timer_8c.html#a703c60b40c8c49607d6ecb6fef82d27a" title=" " alt="" coords="546,259,653,285"/>
+<area shape="rect" id="node4" href="$mouse_8c.html#a7e311379d4d64f88873ef8ade5c82a25" title="disables mouse&#39;s data reporting" alt="" coords="163,59,304,101"/>
+<area shape="rect" id="node5" href="$proj_8c.html#a2a16f651eccbd248e1ad3b3b924b143b" title=" " alt="" coords="5,117,115,144"/>
+<area shape="rect" id="node8" href="$game_8c.html#abfbee20b241e7d5bbbef9ab36fb201a4" title=" " alt="" coords="380,157,463,184"/>
+<area shape="rect" id="node11" href="$timer_8c.html#af2c04fa8e97ffa748fd3f612886a92a7" title=" " alt="" coords="352,259,491,285"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="drawObjects" name="drawObjects">
+<area shape="rect" id="node1" title="Function responsible for drawing all the objects of the game and also the mouse." alt="" coords="5,5,100,32"/>
+<area shape="rect" id="node2" href="$graphics_8c.html#a496843f365959ef8c821e47493dc6be7" title="Draws the XPM on the screen." alt="" coords="148,5,253,32"/>
+<area shape="rect" id="node3" href="$graphics_8c.html#a08c498ffeb0a3962e3b7711b57397741" title=" " alt="" coords="301,5,404,32"/>
+</map>

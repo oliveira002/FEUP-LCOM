@@ -1,0 +1,5 @@
+<map id="cleanAllBG" name="cleanAllBG">
+<area shape="rect" id="node1" title="Function responsible for cleaning the pixels that changed from the initial background." alt="" coords="5,5,92,32"/>
+<area shape="rect" id="node2" href="$graphics_8c.html#a98bdad3662edea366e432270b278cc4b" title="Clears the XPM on the screen by paiting the background." alt="" coords="140,5,212,32"/>
+<area shape="rect" id="node3" href="$graphics_8c.html#a08c498ffeb0a3962e3b7711b57397741" title=" " alt="" coords="260,5,363,32"/>
+</map>

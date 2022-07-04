@@ -1,0 +1,4 @@
+<map id="MenuMouseHandler" name="MenuMouseHandler">
+<area shape="rect" id="node1" title="checks the mouse position and chooses the option that it&#39;s hovering if clicked on" alt="" coords="5,5,143,32"/>
+<area shape="rect" id="node2" href="$menu_8c.html#ab813c6f8436492261f3869d21ded2f17" title="changes gamestate depending on the selected option" alt="" coords="191,5,285,32"/>
+</map>

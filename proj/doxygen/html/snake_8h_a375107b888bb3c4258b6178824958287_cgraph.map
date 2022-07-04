@@ -1,0 +1,4 @@
+<map id="startBlocks" name="startBlocks">
+<area shape="rect" id="node1" title="Function responsible for spawning all the blocks." alt="" coords="5,5,93,32"/>
+<area shape="rect" id="node2" href="$snake_8c.html#aff2507557a8a3f3404211ab3f215cace" title="Function responsible for creating a block in the specified position." alt="" coords="141,5,213,32"/>
+</map>

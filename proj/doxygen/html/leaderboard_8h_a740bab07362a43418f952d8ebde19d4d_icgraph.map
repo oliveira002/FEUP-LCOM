@@ -1,0 +1,7 @@
+<map id="BoardHandlerKBC" name="BoardHandlerKBC">
+<area shape="rect" id="node1" title="return to menu if user presses escape" alt="" coords="564,5,691,32"/>
+<area shape="rect" id="node2" href="$game_8c.html#a27532029ebb339dae5994d7f5d8cb3cb" title=" " alt="" coords="448,5,516,32"/>
+<area shape="rect" id="node3" href="$game_8c.html#accf20527eb893df42de9caab367d8cbf" title=" " alt="" coords="293,5,400,32"/>
+<area shape="rect" id="node4" href="$game_8c.html#abfbee20b241e7d5bbbef9ab36fb201a4" title=" " alt="" coords="163,5,245,32"/>
+<area shape="rect" id="node5" href="$proj_8c.html#a2a16f651eccbd248e1ad3b3b924b143b" title=" " alt="" coords="5,5,115,32"/>
+</map>

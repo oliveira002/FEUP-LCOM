@@ -1,0 +1,5 @@
+<map id="drawBG" name="drawBG">
+<area shape="rect" id="node1" title="Function responsible for drawing the background of the game." alt="" coords="5,5,73,32"/>
+<area shape="rect" id="node2" href="$graphics_8c.html#a496843f365959ef8c821e47493dc6be7" title="Draws the XPM on the screen." alt="" coords="121,5,227,32"/>
+<area shape="rect" id="node3" href="$graphics_8c.html#a08c498ffeb0a3962e3b7711b57397741" title=" " alt="" coords="275,5,377,32"/>
+</map>

@@ -1,0 +1,28 @@
+\hypertarget{graphics_8h_source}{}\doxysection{graphics.\+h}
+\label{graphics_8h_source}\index{C:/Users/Rui Andrade/Documents/MINIX-\/LCOM/Minix Shared Folder/g04/proj/src/devices/graphics.h@{C:/Users/Rui Andrade/Documents/MINIX-\/LCOM/Minix Shared Folder/g04/proj/src/devices/graphics.h}}
+\mbox{\hyperlink{graphics_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef \_LCOM\_GRAPHICS\_H\_}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define \_LCOM\_GRAPHICS\_H\_}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <lcom/lcf.h>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{vbe_macros_8h}{vbeMacros.h}}"{}}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{12 int (\mbox{\hyperlink{graphics_8h_ab15a07157365105e6e15d0ae87e9cb6d}{video\_set\_graphics}})(uint16\_t mode);}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{22 int(\mbox{\hyperlink{graphics_8h_a3d637ba6438c3c79c0eafe641a2637d4}{vg\_draw\_matrix}})(uint16\_t mode, uint8\_t no\_rectangles, uint32\_t first, uint8\_t step);}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{32 int (\mbox{\hyperlink{graphics_8h_a496843f365959ef8c821e47493dc6be7}{draw\_pix\_map}})(uint16\_t x, uint16\_t y, uint8\_t *map, xpm\_image\_t img);}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{44 int (\mbox{\hyperlink{graphics_8h_a3111ea21013ad9656c7795b4d491b984}{draw\_letter\_map}})(uint16\_t x, uint16\_t y, uint8\_t *map, xpm\_image\_t img, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} startX, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} startY);}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{54 int (\mbox{\hyperlink{graphics_8h_a1559628d6c717b11b21455eaeeffe06b}{clear\_pix\_map}})(uint16\_t x, uint16\_t y, xpm\_image\_t img);}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{59 \textcolor{keywordtype}{void} \mbox{\hyperlink{graphics_8h_a616d84037516eeeebf36a0ca870302b1}{switchBuffer}}();}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{70 \textcolor{keywordtype}{void} \mbox{\hyperlink{graphics_8h_a98bdad3662edea366e432270b278cc4b}{cleanBG}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} y, \textcolor{keywordtype}{int} width, \textcolor{keywordtype}{int} height, xpm\_image\_t img, uint8\_t* map);}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{75 \textcolor{keywordtype}{void} \mbox{\hyperlink{graphics_8h_a62f0028869c2b74dbe203e22ab8b424e}{exit\_graphics}}();}
+\DoxyCodeLine{76 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

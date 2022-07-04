@@ -1,0 +1,334 @@
+\hypertarget{game_8h}{}\doxysection{C\+:/\+Users/\+Rui Andrade/\+Documents/\+MINIX-\/\+LCOM/\+Minix Shared Folder/g04/proj/src/game.h File Reference}
+\label{game_8h}\index{C:/Users/Rui Andrade/Documents/MINIX-\/LCOM/Minix Shared Folder/g04/proj/src/game.h@{C:/Users/Rui Andrade/Documents/MINIX-\/LCOM/Minix Shared Folder/g04/proj/src/game.h}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}devices/keyboard.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}devices/mouse.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}snake.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}menu.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}pause.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}kbc\+Keys.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}devices/graphics.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}leaderboard.\+h\char`\"{}}\newline
+Include dependency graph for game.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{game_8h_a833b28f90e109607cd5d9e826474893a}{DEVICE}} \{ \newline
+\mbox{\hyperlink{game_8h_a833b28f90e109607cd5d9e826474893aa74ac60f101b84bf20ad232e801f4a403}{KBC}}
+, \mbox{\hyperlink{game_8h_a833b28f90e109607cd5d9e826474893aa17ba9bae1b8d7e8d6c12d46ec58e0769}{TIMER}}
+, \mbox{\hyperlink{game_8h_a833b28f90e109607cd5d9e826474893aa6abd13b0a6bf7894c7ceb5ff45ddbc14}{MOUSE}}
+, \mbox{\hyperlink{game_8h_a833b28f90e109607cd5d9e826474893aa24073a11916b946561b8cb5c9dfe9bce}{RTC}}
+, \newline
+\mbox{\hyperlink{game_8h_a833b28f90e109607cd5d9e826474893aa8df0c8afbdfe2658d92b9393feb141cd}{SERIAL\+\_\+\+PORT}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{game_8h_abfbee20b241e7d5bbbef9ab36fb201a4}{game\+Loop}} ()
+\item 
+void \mbox{\hyperlink{game_8h_accf20527eb893df42de9caab367d8cbf}{Interrupt\+Router}} (enum \mbox{\hyperlink{game_8h_a833b28f90e109607cd5d9e826474893a}{DEVICE}} device)
+\item 
+void \mbox{\hyperlink{game_8h_ad209d47184f4f1b4f5be0fa5ef6c7557}{Menu\+IH}} (enum \mbox{\hyperlink{game_8h_a833b28f90e109607cd5d9e826474893a}{DEVICE}} device)
+\item 
+void \mbox{\hyperlink{game_8h_a1e9cc9084b63d99e8126b3c8a4b35d45}{Pause\+IH}} (enum \mbox{\hyperlink{game_8h_a833b28f90e109607cd5d9e826474893a}{DEVICE}} device)
+\item 
+void \mbox{\hyperlink{game_8h_a44e858f7686dc3323d269fe1b22b3d80}{Play\+Solo\+IH}} (enum \mbox{\hyperlink{game_8h_a833b28f90e109607cd5d9e826474893a}{DEVICE}} device)
+\item 
+void \mbox{\hyperlink{game_8h_af99d78333e1c47e51b6bfdc31720305a}{Play\+Multiplayer\+IH}} (enum \mbox{\hyperlink{game_8h_a833b28f90e109607cd5d9e826474893a}{DEVICE}} device)
+\item 
+void \mbox{\hyperlink{game_8h_a47dca95cf818b3bc7352c1757bd92f2d}{Dead\+IH}} (enum \mbox{\hyperlink{game_8h_a833b28f90e109607cd5d9e826474893a}{DEVICE}} device)
+\item 
+void \mbox{\hyperlink{game_8h_a10fc1dbcd95e686e18e42b4e7826ffa9}{change\+Position}} ()
+\item 
+void \mbox{\hyperlink{game_8h_a85c95f0f803cb3ce36affb5c221a0b5f}{update\+KBC}} ()
+\item 
+void \mbox{\hyperlink{game_8h_ac3e4b631b5afb632e0bb3d2355022b55}{load\+All}} ()
+\item 
+void \mbox{\hyperlink{game_8h_aaac5cec6ab8daf8b688538a972973fb2}{init\+Letters}} ()
+\item 
+void \mbox{\hyperlink{game_8h_a27532029ebb339dae5994d7f5d8cb3cb}{Board\+IH}} (enum \mbox{\hyperlink{game_8h_a833b28f90e109607cd5d9e826474893a}{DEVICE}} device)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{game_8h_a833b28f90e109607cd5d9e826474893a}\label{game_8h_a833b28f90e109607cd5d9e826474893a}} 
+\index{game.h@{game.h}!DEVICE@{DEVICE}}
+\index{DEVICE@{DEVICE}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{DEVICE}{DEVICE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{game_8h_a833b28f90e109607cd5d9e826474893a}{DEVICE}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KBC@{KBC}!game.h@{game.h}}\index{game.h@{game.h}!KBC@{KBC}}}\mbox{\Hypertarget{game_8h_a833b28f90e109607cd5d9e826474893aa74ac60f101b84bf20ad232e801f4a403}\label{game_8h_a833b28f90e109607cd5d9e826474893aa74ac60f101b84bf20ad232e801f4a403}} 
+KBC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TIMER@{TIMER}!game.h@{game.h}}\index{game.h@{game.h}!TIMER@{TIMER}}}\mbox{\Hypertarget{game_8h_a833b28f90e109607cd5d9e826474893aa17ba9bae1b8d7e8d6c12d46ec58e0769}\label{game_8h_a833b28f90e109607cd5d9e826474893aa17ba9bae1b8d7e8d6c12d46ec58e0769}} 
+TIMER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MOUSE@{MOUSE}!game.h@{game.h}}\index{game.h@{game.h}!MOUSE@{MOUSE}}}\mbox{\Hypertarget{game_8h_a833b28f90e109607cd5d9e826474893aa6abd13b0a6bf7894c7ceb5ff45ddbc14}\label{game_8h_a833b28f90e109607cd5d9e826474893aa6abd13b0a6bf7894c7ceb5ff45ddbc14}} 
+MOUSE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RTC@{RTC}!game.h@{game.h}}\index{game.h@{game.h}!RTC@{RTC}}}\mbox{\Hypertarget{game_8h_a833b28f90e109607cd5d9e826474893aa24073a11916b946561b8cb5c9dfe9bce}\label{game_8h_a833b28f90e109607cd5d9e826474893aa24073a11916b946561b8cb5c9dfe9bce}} 
+RTC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SERIAL\_PORT@{SERIAL\_PORT}!game.h@{game.h}}\index{game.h@{game.h}!SERIAL\_PORT@{SERIAL\_PORT}}}\mbox{\Hypertarget{game_8h_a833b28f90e109607cd5d9e826474893aa8df0c8afbdfe2658d92b9393feb141cd}\label{game_8h_a833b28f90e109607cd5d9e826474893aa8df0c8afbdfe2658d92b9393feb141cd}} 
+SERIAL\+\_\+\+PORT&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{game_8h_a27532029ebb339dae5994d7f5d8cb3cb}\label{game_8h_a27532029ebb339dae5994d7f5d8cb3cb}} 
+\index{game.h@{game.h}!BoardIH@{BoardIH}}
+\index{BoardIH@{BoardIH}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{BoardIH()}{BoardIH()}}
+{\footnotesize\ttfamily void Board\+IH (\begin{DoxyParamCaption}\item[{enum \mbox{\hyperlink{game_8h_a833b28f90e109607cd5d9e826474893a}{DEVICE}}}]{device }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{game_8h_a27532029ebb339dae5994d7f5d8cb3cb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_a27532029ebb339dae5994d7f5d8cb3cb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8h_a10fc1dbcd95e686e18e42b4e7826ffa9}\label{game_8h_a10fc1dbcd95e686e18e42b4e7826ffa9}} 
+\index{game.h@{game.h}!changePosition@{changePosition}}
+\index{changePosition@{changePosition}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{changePosition()}{changePosition()}}
+{\footnotesize\ttfamily void change\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{game_8h_a10fc1dbcd95e686e18e42b4e7826ffa9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_a10fc1dbcd95e686e18e42b4e7826ffa9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8h_a47dca95cf818b3bc7352c1757bd92f2d}\label{game_8h_a47dca95cf818b3bc7352c1757bd92f2d}} 
+\index{game.h@{game.h}!DeadIH@{DeadIH}}
+\index{DeadIH@{DeadIH}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{DeadIH()}{DeadIH()}}
+{\footnotesize\ttfamily void Dead\+IH (\begin{DoxyParamCaption}\item[{enum \mbox{\hyperlink{game_8h_a833b28f90e109607cd5d9e826474893a}{DEVICE}}}]{device }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_a47dca95cf818b3bc7352c1757bd92f2d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8h_abfbee20b241e7d5bbbef9ab36fb201a4}\label{game_8h_abfbee20b241e7d5bbbef9ab36fb201a4}} 
+\index{game.h@{game.h}!gameLoop@{gameLoop}}
+\index{gameLoop@{gameLoop}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{gameLoop()}{gameLoop()}}
+{\footnotesize\ttfamily void game\+Loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_abfbee20b241e7d5bbbef9ab36fb201a4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{game_8h_abfbee20b241e7d5bbbef9ab36fb201a4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8h_aaac5cec6ab8daf8b688538a972973fb2}\label{game_8h_aaac5cec6ab8daf8b688538a972973fb2}} 
+\index{game.h@{game.h}!initLetters@{initLetters}}
+\index{initLetters@{initLetters}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{initLetters()}{initLetters()}}
+{\footnotesize\ttfamily void init\+Letters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_aaac5cec6ab8daf8b688538a972973fb2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8h_accf20527eb893df42de9caab367d8cbf}\label{game_8h_accf20527eb893df42de9caab367d8cbf}} 
+\index{game.h@{game.h}!InterruptRouter@{InterruptRouter}}
+\index{InterruptRouter@{InterruptRouter}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{InterruptRouter()}{InterruptRouter()}}
+{\footnotesize\ttfamily void Interrupt\+Router (\begin{DoxyParamCaption}\item[{enum \mbox{\hyperlink{game_8h_a833b28f90e109607cd5d9e826474893a}{DEVICE}}}]{device }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_accf20527eb893df42de9caab367d8cbf_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_accf20527eb893df42de9caab367d8cbf_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8h_ac3e4b631b5afb632e0bb3d2355022b55}\label{game_8h_ac3e4b631b5afb632e0bb3d2355022b55}} 
+\index{game.h@{game.h}!loadAll@{loadAll}}
+\index{loadAll@{loadAll}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{loadAll()}{loadAll()}}
+{\footnotesize\ttfamily void load\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{game_8h_ac3e4b631b5afb632e0bb3d2355022b55_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{game_8h_ac3e4b631b5afb632e0bb3d2355022b55_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8h_ad209d47184f4f1b4f5be0fa5ef6c7557}\label{game_8h_ad209d47184f4f1b4f5be0fa5ef6c7557}} 
+\index{game.h@{game.h}!MenuIH@{MenuIH}}
+\index{MenuIH@{MenuIH}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{MenuIH()}{MenuIH()}}
+{\footnotesize\ttfamily void Menu\+IH (\begin{DoxyParamCaption}\item[{enum \mbox{\hyperlink{game_8h_a833b28f90e109607cd5d9e826474893a}{DEVICE}}}]{device }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_ad209d47184f4f1b4f5be0fa5ef6c7557_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_ad209d47184f4f1b4f5be0fa5ef6c7557_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8h_a1e9cc9084b63d99e8126b3c8a4b35d45}\label{game_8h_a1e9cc9084b63d99e8126b3c8a4b35d45}} 
+\index{game.h@{game.h}!PauseIH@{PauseIH}}
+\index{PauseIH@{PauseIH}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{PauseIH()}{PauseIH()}}
+{\footnotesize\ttfamily void Pause\+IH (\begin{DoxyParamCaption}\item[{enum \mbox{\hyperlink{game_8h_a833b28f90e109607cd5d9e826474893a}{DEVICE}}}]{device }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_a1e9cc9084b63d99e8126b3c8a4b35d45_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_a1e9cc9084b63d99e8126b3c8a4b35d45_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8h_af99d78333e1c47e51b6bfdc31720305a}\label{game_8h_af99d78333e1c47e51b6bfdc31720305a}} 
+\index{game.h@{game.h}!PlayMultiplayerIH@{PlayMultiplayerIH}}
+\index{PlayMultiplayerIH@{PlayMultiplayerIH}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{PlayMultiplayerIH()}{PlayMultiplayerIH()}}
+{\footnotesize\ttfamily void Play\+Multiplayer\+IH (\begin{DoxyParamCaption}\item[{enum \mbox{\hyperlink{game_8h_a833b28f90e109607cd5d9e826474893a}{DEVICE}}}]{device }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_af99d78333e1c47e51b6bfdc31720305a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8h_a44e858f7686dc3323d269fe1b22b3d80}\label{game_8h_a44e858f7686dc3323d269fe1b22b3d80}} 
+\index{game.h@{game.h}!PlaySoloIH@{PlaySoloIH}}
+\index{PlaySoloIH@{PlaySoloIH}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{PlaySoloIH()}{PlaySoloIH()}}
+{\footnotesize\ttfamily void Play\+Solo\+IH (\begin{DoxyParamCaption}\item[{enum \mbox{\hyperlink{game_8h_a833b28f90e109607cd5d9e826474893a}{DEVICE}}}]{device }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_a44e858f7686dc3323d269fe1b22b3d80_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_a44e858f7686dc3323d269fe1b22b3d80_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8h_a85c95f0f803cb3ce36affb5c221a0b5f}\label{game_8h_a85c95f0f803cb3ce36affb5c221a0b5f}} 
+\index{game.h@{game.h}!updateKBC@{updateKBC}}
+\index{updateKBC@{updateKBC}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{updateKBC()}{updateKBC()}}
+{\footnotesize\ttfamily void update\+KBC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_a85c95f0f803cb3ce36affb5c221a0b5f_icgraph}
+\end{center}
+\end{figure}

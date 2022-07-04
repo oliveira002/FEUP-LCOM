@@ -1,0 +1,821 @@
+\hypertarget{snake_8c}{}\doxysection{C\+:/\+Users/\+Rui Andrade/\+Documents/\+MINIX-\/\+LCOM/\+Minix Shared Folder/g04/proj/src/snake.c File Reference}
+\label{snake_8c}\index{C:/Users/Rui Andrade/Documents/MINIX-\/LCOM/Minix Shared Folder/g04/proj/src/snake.c@{C:/Users/Rui Andrade/Documents/MINIX-\/LCOM/Minix Shared Folder/g04/proj/src/snake.c}}
+{\ttfamily \#include \char`\"{}snake.\+h\char`\"{}}\newline
+Include dependency graph for snake.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{snake_8c_afcdde9b4c6f02cd996f37a059d6d1235}{Menu\+Starter}} ()
+\begin{DoxyCompactList}\small\item\em Function responsible for initiating all the variables of the game, and also resetting them coming back from the Pause Menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{snake_8c_a37a1a64726df563c1615e713289a30bd}{spawn\+Fruits}} ()
+\begin{DoxyCompactList}\small\item\em Function responsible for randomly spawning fruits within the map borders, also checks for possible collisions (spawn on top of the snake for example) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{snake_8c_a47ef13939f66d01657db71355518bf95}{Interrupt\+Handler\+Timer}} ()
+\begin{DoxyCompactList}\small\item\em Function to handle timer interrupts when the game\+State is PLAY\+\_\+\+SOLO, is also responsible for printing all the objects. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{snake_8c_a4f4cdc5a6b882a5f3d7776e40a2fa505}{draw\+Snake}} ()
+\begin{DoxyCompactList}\small\item\em Function responsible for drawing the snake, taking in account the direction it is going. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{snake_8c_af5808b10d2bfc050eb76e8d07055f46e}{draw\+Objects}} ()
+\begin{DoxyCompactList}\small\item\em Function responsible for drawing all the objects of the game and also the mouse. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{snake_8c_a01311dd183a0158bb4da61b69ac2fb0a}{draw\+BG}} ()
+\begin{DoxyCompactList}\small\item\em Function responsible for drawing the background of the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{snake_8c_a792623332c8199451999b1d06c4b2e16}{move\+Snake}} ()
+\begin{DoxyCompactList}\small\item\em Function responsible for not only moving the snake head but also for moving its tail. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{snake_8c_a23bc8b5691d42ef613230b1f636b413c}{Game\+Over\+Leader\+Board}} ()
+\begin{DoxyCompactList}\small\item\em Updates the game\+State to DEAD, and writes on the leaderboard the score. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{snake_8c_a8ebc9c9154b6c78948850b34b555d1e7}{Check\+Colisions}} ()
+\begin{DoxyCompactList}\small\item\em Function responsible for checking possible collisions of the snake. Checks for the border,fruits \& blocks. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{snake_8c_a8801961ce0ec8ab368c8cfe262f2b429}{Interrupt\+Handler\+KBC}} (enum \mbox{\hyperlink{kbc_keys_8h_a6ae70ce7b1b294c469f11cbabb8f30d6}{KEY}} k)
+\begin{DoxyCompactList}\small\item\em Function to handle keyboard interrupts when the game\+State is PLAY\+\_\+\+SOLO, update the snake direction \& check for ESC KEY(pause) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{snake_8c_a1439c359b287c19809ed0f5e128d57bb}{update\+Mov}} ()
+\begin{DoxyCompactList}\small\item\em Function responsible for update the movement of the snake, and also forbids the snake from going in the opposed direction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{snake_8c_a175191134328c8902595d554281ddb19}{clean\+All\+BG}} ()
+\begin{DoxyCompactList}\small\item\em Function responsible for cleaning the pixels that changed from the initial background. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{snake_8c_a25dc2ca4d9df92524e8563f3f67d6d28}{Interrupt\+Handler\+Mouse}} ()
+\begin{DoxyCompactList}\small\item\em Function to handle mouse interrupts when the game\+State is PLAY\+\_\+\+SOLO. Takes care of the left click and right click functionality. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{snake_8c_a9445ad680de846efddde3d4a52110377}{check\+Fruit}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Function to check if there is a fruit in the specified position. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{snake_8c_a51eb06e541b597eb5a28986220b5619c}{find\+Idx\+Block}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Function responsible for returning the idx of the specified block in its array. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{snake_8c_aff2507557a8a3f3404211ab3f215cace}{init\+Block}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Function responsible for creating a block in the specified position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{snake_8c_a375107b888bb3c4258b6178824958287}{start\+Blocks}} ()
+\begin{DoxyCompactList}\small\item\em Function responsible for spawning all the blocks. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{snake_8c_af895200eed6c62b16871ef2d233a3489}{draw\+Score}} ()
+\begin{DoxyCompactList}\small\item\em Function responsible for drawing the current score of the user on the screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static enum \mbox{\hyperlink{kbc_keys_8h_a6ae70ce7b1b294c469f11cbabb8f30d6}{KEY}} \mbox{\hyperlink{snake_8c_aa2941407eff4b85ccb4bd9a905b7fd6b}{Mov\+General}}
+\item 
+static enum \mbox{\hyperlink{kbc_keys_8h_a6ae70ce7b1b294c469f11cbabb8f30d6}{KEY}} \mbox{\hyperlink{snake_8c_aa67f77aa4d71da458e0a20c7c4fec1a6}{Mov\+Aux}}
+\item 
+static double \mbox{\hyperlink{snake_8c_accacf4e9263030d70ed79f8516c0eac5}{velocity}}
+\item 
+static \mbox{\hyperlink{snake_8h_a0791245f0bc890530f6366f1f0e9de9d}{Snake\+Body}} \mbox{\hyperlink{snake_8c_a05ea269b3c754f114c44a0f27192b2d6}{snake}}
+\item 
+enum \mbox{\hyperlink{kbc_keys_8h_a275a67132f10277ada3a0ee3d616b647}{STATE}} \mbox{\hyperlink{snake_8c_ac76be68b581c92c04b6492acdd14fa77}{Game\+State}}
+\item 
+int \mbox{\hyperlink{snake_8c_a617a47c70795bcff659815ad0efd2266}{counter}}
+\item 
+static \mbox{\hyperlink{snake_8h_aee6fe5e4f0040f46c849d2bd3ac3ceca}{Object}} \mbox{\hyperlink{snake_8c_a158f0efd66fc6481ff6dffee27a27530}{array}} \mbox{[}5000\mbox{]}
+\item 
+static \mbox{\hyperlink{snake_8h_aee6fe5e4f0040f46c849d2bd3ac3ceca}{Object}} \mbox{\hyperlink{snake_8c_ad5bbe8ef94a0b70067e60da76d7485df}{walls}} \mbox{[}5000\mbox{]}
+\item 
+static int \mbox{\hyperlink{snake_8c_ae636045b36cdfc8ecc2ebe2be3856ce0}{num\+Objects}} = 0
+\item 
+static int \mbox{\hyperlink{snake_8c_aa6eff1822b2e9bc2cc326a8269edb436}{fruit\+Eaten}} = 1
+\item 
+static int \mbox{\hyperlink{snake_8c_a4fe61503ee24812d92fffe49f6fffd3d}{clean\+MouseX}} = 0
+\item 
+static int \mbox{\hyperlink{snake_8c_a595170673d2033e8d3e83828015ead5a}{clean\+MouseY}} = 0
+\item 
+static int \mbox{\hyperlink{snake_8c_a972ca76d5a5942770070d1509691fcd5}{num\+Fruits}} = 0
+\item 
+static int \mbox{\hyperlink{snake_8c_ae6030c61dacb12f2407981efe5a00fbb}{num\+Blocks}} = 0
+\item 
+bool \mbox{\hyperlink{snake_8c_ab376b87f96a574a793c03c53e75afec8}{start}} = true
+\item 
+static int \mbox{\hyperlink{snake_8c_a3c4b3e5cf461d23de1245627c2280ff6}{mouse\+Used}} = 0
+\item 
+\mbox{\hyperlink{kbc_keys_8h_ab0a8e61dcfdccf29000580179ab166b9}{Character}} \mbox{\hyperlink{snake_8c_a8a217079b65d84cda14ad95406ae9ddc}{letters}} \mbox{[}40\mbox{]}
+\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{snake_8c_a8a01ead0fa516e966b41146f79df6809}{font}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{snake_8c_a1c1a6de195b2a40415945a8fbdae6638}{img\+Font}}
+\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{snake_8c_a31305e142a1111b89972c4deaa5dfeb4}{snake\+Up}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{snake_8c_a21545b8bdfebeee5d834a27a3b2c47d5}{img\+Snake\+Up}}
+\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{snake_8c_afda73f3b72c9bde3b0c4f920cb75c85c}{snake\+Left}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{snake_8c_a8025693b935412bff292d46c0e98be48}{img\+Snake\+Left}}
+\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{snake_8c_a458aad1a1a2db30bc394639109d02655}{snake\+Right}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{snake_8c_ae864b3ae77d77ce8bce977bef98dda27}{img\+Snake\+Right}}
+\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{snake_8c_a41609a147ca343ddab1c2f69dbc483cd}{snake\+Down}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{snake_8c_a5d52304d7fb97310fc7d14997e874f8d}{img\+Snake\+Down}}
+\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{snake_8c_a36bc888083c8234f5a69f5d2adf1cb73}{fruitI}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{snake_8c_a4d43b23249d18763f6598631cd28dbcf}{img\+Fruit}}
+\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{snake_8c_ad7f543910e83181e1cc74959d774829a}{game\+BG}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{snake_8c_a8a1c771f59a1b5cd014db425439b685d}{img\+Game\+BG}}
+\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{snake_8c_a2fdd2368b1b8a07c82603a2c5fc082a3}{snake\+Tail}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{snake_8c_ae5751211cd88c89660753e3ed0f896f8}{img\+Snake\+Tail}}
+\item 
+\mbox{\hyperlink{kbc_keys_8h_af3227f612ec43c954504384a3de25a53}{mouse\+Info}} \mbox{\hyperlink{snake_8c_a9e13f6380203ceffdb068b30c6004515}{mouse}}
+\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{snake_8c_addb5232cc0560d62b4a28c3876400cbd}{cursor}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{snake_8c_a7a05ccab5605607541fd6ae1a2db653e}{img\+Cursor}}
+\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{snake_8c_a94b21f014a3a1281eb640d8298f9389d}{brickD}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{snake_8c_a5b5eb5d335e898555529b3b55819553e}{img\+Brick}}
+\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{snake_8c_a9ea4092b433a3536b4bd938c757537d7}{broken}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{snake_8c_a660372536eb896ade5404814260a8b60}{img\+Broken}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{snake_8c_a8ebc9c9154b6c78948850b34b555d1e7}\label{snake_8c_a8ebc9c9154b6c78948850b34b555d1e7}} 
+\index{snake.c@{snake.c}!CheckColisions@{CheckColisions}}
+\index{CheckColisions@{CheckColisions}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{CheckColisions()}{CheckColisions()}}
+{\footnotesize\ttfamily int Check\+Colisions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function responsible for checking possible collisions of the snake. Checks for the border,fruits \& blocks. 
+
+\begin{DoxyReturn}{Returns}
+0 if success, 1 otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8c_a8ebc9c9154b6c78948850b34b555d1e7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8c_a8ebc9c9154b6c78948850b34b555d1e7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{snake_8c_a9445ad680de846efddde3d4a52110377}\label{snake_8c_a9445ad680de846efddde3d4a52110377}} 
+\index{snake.c@{snake.c}!checkFruit@{checkFruit}}
+\index{checkFruit@{checkFruit}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{checkFruit()}{checkFruit()}}
+{\footnotesize\ttfamily bool check\+Fruit (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Function to check if there is a fruit in the specified position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if there is a fruit, false otherwise 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8c_a9445ad680de846efddde3d4a52110377_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{snake_8c_a175191134328c8902595d554281ddb19}\label{snake_8c_a175191134328c8902595d554281ddb19}} 
+\index{snake.c@{snake.c}!cleanAllBG@{cleanAllBG}}
+\index{cleanAllBG@{cleanAllBG}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{cleanAllBG()}{cleanAllBG()}}
+{\footnotesize\ttfamily void clean\+All\+BG (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function responsible for cleaning the pixels that changed from the initial background. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{snake_8c_a175191134328c8902595d554281ddb19_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8c_a175191134328c8902595d554281ddb19_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{snake_8c_a01311dd183a0158bb4da61b69ac2fb0a}\label{snake_8c_a01311dd183a0158bb4da61b69ac2fb0a}} 
+\index{snake.c@{snake.c}!drawBG@{drawBG}}
+\index{drawBG@{drawBG}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{drawBG()}{drawBG()}}
+{\footnotesize\ttfamily void draw\+BG (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function responsible for drawing the background of the game. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8c_a01311dd183a0158bb4da61b69ac2fb0a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=347pt]{snake_8c_a01311dd183a0158bb4da61b69ac2fb0a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{snake_8c_af5808b10d2bfc050eb76e8d07055f46e}\label{snake_8c_af5808b10d2bfc050eb76e8d07055f46e}} 
+\index{snake.c@{snake.c}!drawObjects@{drawObjects}}
+\index{drawObjects@{drawObjects}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{drawObjects()}{drawObjects()}}
+{\footnotesize\ttfamily void draw\+Objects (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function responsible for drawing all the objects of the game and also the mouse. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8c_af5808b10d2bfc050eb76e8d07055f46e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8c_af5808b10d2bfc050eb76e8d07055f46e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{snake_8c_af895200eed6c62b16871ef2d233a3489}\label{snake_8c_af895200eed6c62b16871ef2d233a3489}} 
+\index{snake.c@{snake.c}!drawScore@{drawScore}}
+\index{drawScore@{drawScore}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{drawScore()}{drawScore()}}
+{\footnotesize\ttfamily void draw\+Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function responsible for drawing the current score of the user on the screen. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8c_af895200eed6c62b16871ef2d233a3489_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8c_af895200eed6c62b16871ef2d233a3489_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{snake_8c_a4f4cdc5a6b882a5f3d7776e40a2fa505}\label{snake_8c_a4f4cdc5a6b882a5f3d7776e40a2fa505}} 
+\index{snake.c@{snake.c}!drawSnake@{drawSnake}}
+\index{drawSnake@{drawSnake}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{drawSnake()}{drawSnake()}}
+{\footnotesize\ttfamily void draw\+Snake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function responsible for drawing the snake, taking in account the direction it is going. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8c_a4f4cdc5a6b882a5f3d7776e40a2fa505_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8c_a4f4cdc5a6b882a5f3d7776e40a2fa505_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{snake_8c_a51eb06e541b597eb5a28986220b5619c}\label{snake_8c_a51eb06e541b597eb5a28986220b5619c}} 
+\index{snake.c@{snake.c}!findIdxBlock@{findIdxBlock}}
+\index{findIdxBlock@{findIdxBlock}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{findIdxBlock()}{findIdxBlock()}}
+{\footnotesize\ttfamily int find\+Idx\+Block (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Function responsible for returning the idx of the specified block in its array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the index, -\/1 otherwise 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8c_a51eb06e541b597eb5a28986220b5619c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{snake_8c_a23bc8b5691d42ef613230b1f636b413c}\label{snake_8c_a23bc8b5691d42ef613230b1f636b413c}} 
+\index{snake.c@{snake.c}!GameOverLeaderBoard@{GameOverLeaderBoard}}
+\index{GameOverLeaderBoard@{GameOverLeaderBoard}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{GameOverLeaderBoard()}{GameOverLeaderBoard()}}
+{\footnotesize\ttfamily int Game\+Over\+Leader\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Updates the game\+State to DEAD, and writes on the leaderboard the score. 
+
+\begin{DoxyReturn}{Returns}
+0 if sucess, -\/1 otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{snake_8c_a23bc8b5691d42ef613230b1f636b413c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8c_a23bc8b5691d42ef613230b1f636b413c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{snake_8c_aff2507557a8a3f3404211ab3f215cace}\label{snake_8c_aff2507557a8a3f3404211ab3f215cace}} 
+\index{snake.c@{snake.c}!initBlock@{initBlock}}
+\index{initBlock@{initBlock}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{initBlock()}{initBlock()}}
+{\footnotesize\ttfamily void init\+Block (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Function responsible for creating a block in the specified position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8c_aff2507557a8a3f3404211ab3f215cace_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{snake_8c_a8801961ce0ec8ab368c8cfe262f2b429}\label{snake_8c_a8801961ce0ec8ab368c8cfe262f2b429}} 
+\index{snake.c@{snake.c}!InterruptHandlerKBC@{InterruptHandlerKBC}}
+\index{InterruptHandlerKBC@{InterruptHandlerKBC}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{InterruptHandlerKBC()}{InterruptHandlerKBC()}}
+{\footnotesize\ttfamily void Interrupt\+Handler\+KBC (\begin{DoxyParamCaption}\item[{enum \mbox{\hyperlink{kbc_keys_8h_a6ae70ce7b1b294c469f11cbabb8f30d6}{KEY}}}]{k }\end{DoxyParamCaption})}
+
+
+
+Function to handle keyboard interrupts when the game\+State is PLAY\+\_\+\+SOLO, update the snake direction \& check for ESC KEY(pause) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & (key the user pressed in the keyboard) \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8c_a8801961ce0ec8ab368c8cfe262f2b429_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{snake_8c_a25dc2ca4d9df92524e8563f3f67d6d28}\label{snake_8c_a25dc2ca4d9df92524e8563f3f67d6d28}} 
+\index{snake.c@{snake.c}!InterruptHandlerMouse@{InterruptHandlerMouse}}
+\index{InterruptHandlerMouse@{InterruptHandlerMouse}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{InterruptHandlerMouse()}{InterruptHandlerMouse()}}
+{\footnotesize\ttfamily void Interrupt\+Handler\+Mouse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function to handle mouse interrupts when the game\+State is PLAY\+\_\+\+SOLO. Takes care of the left click and right click functionality. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8c_a25dc2ca4d9df92524e8563f3f67d6d28_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8c_a25dc2ca4d9df92524e8563f3f67d6d28_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{snake_8c_a47ef13939f66d01657db71355518bf95}\label{snake_8c_a47ef13939f66d01657db71355518bf95}} 
+\index{snake.c@{snake.c}!InterruptHandlerTimer@{InterruptHandlerTimer}}
+\index{InterruptHandlerTimer@{InterruptHandlerTimer}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{InterruptHandlerTimer()}{InterruptHandlerTimer()}}
+{\footnotesize\ttfamily void Interrupt\+Handler\+Timer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function to handle timer interrupts when the game\+State is PLAY\+\_\+\+SOLO, is also responsible for printing all the objects. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8c_a47ef13939f66d01657db71355518bf95_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8c_a47ef13939f66d01657db71355518bf95_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{snake_8c_afcdde9b4c6f02cd996f37a059d6d1235}\label{snake_8c_afcdde9b4c6f02cd996f37a059d6d1235}} 
+\index{snake.c@{snake.c}!MenuStarter@{MenuStarter}}
+\index{MenuStarter@{MenuStarter}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{MenuStarter()}{MenuStarter()}}
+{\footnotesize\ttfamily void Menu\+Starter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function responsible for initiating all the variables of the game, and also resetting them coming back from the Pause Menu. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8c_afcdde9b4c6f02cd996f37a059d6d1235_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{snake_8c_a792623332c8199451999b1d06c4b2e16}\label{snake_8c_a792623332c8199451999b1d06c4b2e16}} 
+\index{snake.c@{snake.c}!moveSnake@{moveSnake}}
+\index{moveSnake@{moveSnake}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{moveSnake()}{moveSnake()}}
+{\footnotesize\ttfamily void move\+Snake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function responsible for not only moving the snake head but also for moving its tail. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8c_a792623332c8199451999b1d06c4b2e16_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{snake_8c_a37a1a64726df563c1615e713289a30bd}\label{snake_8c_a37a1a64726df563c1615e713289a30bd}} 
+\index{snake.c@{snake.c}!spawnFruits@{spawnFruits}}
+\index{spawnFruits@{spawnFruits}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{spawnFruits()}{spawnFruits()}}
+{\footnotesize\ttfamily void spawn\+Fruits (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function responsible for randomly spawning fruits within the map borders, also checks for possible collisions (spawn on top of the snake for example) 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8c_a37a1a64726df563c1615e713289a30bd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{snake_8c_a375107b888bb3c4258b6178824958287}\label{snake_8c_a375107b888bb3c4258b6178824958287}} 
+\index{snake.c@{snake.c}!startBlocks@{startBlocks}}
+\index{startBlocks@{startBlocks}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{startBlocks()}{startBlocks()}}
+{\footnotesize\ttfamily void start\+Blocks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function responsible for spawning all the blocks. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{snake_8c_a375107b888bb3c4258b6178824958287_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8c_a375107b888bb3c4258b6178824958287_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{snake_8c_a1439c359b287c19809ed0f5e128d57bb}\label{snake_8c_a1439c359b287c19809ed0f5e128d57bb}} 
+\index{snake.c@{snake.c}!updateMov@{updateMov}}
+\index{updateMov@{updateMov}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{updateMov()}{updateMov()}}
+{\footnotesize\ttfamily void update\+Mov (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function responsible for update the movement of the snake, and also forbids the snake from going in the opposed direction. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8c_a1439c359b287c19809ed0f5e128d57bb_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{snake_8c_a158f0efd66fc6481ff6dffee27a27530}\label{snake_8c_a158f0efd66fc6481ff6dffee27a27530}} 
+\index{snake.c@{snake.c}!array@{array}}
+\index{array@{array}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{array}{array}}
+{\footnotesize\ttfamily \mbox{\hyperlink{snake_8h_aee6fe5e4f0040f46c849d2bd3ac3ceca}{Object}} array\mbox{[}5000\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{snake_8c_a94b21f014a3a1281eb640d8298f9389d}\label{snake_8c_a94b21f014a3a1281eb640d8298f9389d}} 
+\index{snake.c@{snake.c}!brickD@{brickD}}
+\index{brickD@{brickD}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{brickD}{brickD}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ brickD\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{snake_8c_a9ea4092b433a3536b4bd938c757537d7}\label{snake_8c_a9ea4092b433a3536b4bd938c757537d7}} 
+\index{snake.c@{snake.c}!broken@{broken}}
+\index{broken@{broken}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{broken}{broken}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ broken\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{snake_8c_a4fe61503ee24812d92fffe49f6fffd3d}\label{snake_8c_a4fe61503ee24812d92fffe49f6fffd3d}} 
+\index{snake.c@{snake.c}!cleanMouseX@{cleanMouseX}}
+\index{cleanMouseX@{cleanMouseX}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{cleanMouseX}{cleanMouseX}}
+{\footnotesize\ttfamily int clean\+MouseX = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{snake_8c_a595170673d2033e8d3e83828015ead5a}\label{snake_8c_a595170673d2033e8d3e83828015ead5a}} 
+\index{snake.c@{snake.c}!cleanMouseY@{cleanMouseY}}
+\index{cleanMouseY@{cleanMouseY}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{cleanMouseY}{cleanMouseY}}
+{\footnotesize\ttfamily int clean\+MouseY = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{snake_8c_a617a47c70795bcff659815ad0efd2266}\label{snake_8c_a617a47c70795bcff659815ad0efd2266}} 
+\index{snake.c@{snake.c}!counter@{counter}}
+\index{counter@{counter}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{counter}{counter}}
+{\footnotesize\ttfamily int counter\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{snake_8c_addb5232cc0560d62b4a28c3876400cbd}\label{snake_8c_addb5232cc0560d62b4a28c3876400cbd}} 
+\index{snake.c@{snake.c}!cursor@{cursor}}
+\index{cursor@{cursor}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{cursor}{cursor}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ cursor\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{snake_8c_a8a01ead0fa516e966b41146f79df6809}\label{snake_8c_a8a01ead0fa516e966b41146f79df6809}} 
+\index{snake.c@{snake.c}!font@{font}}
+\index{font@{font}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{font}{font}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ font\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{snake_8c_aa6eff1822b2e9bc2cc326a8269edb436}\label{snake_8c_aa6eff1822b2e9bc2cc326a8269edb436}} 
+\index{snake.c@{snake.c}!fruitEaten@{fruitEaten}}
+\index{fruitEaten@{fruitEaten}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{fruitEaten}{fruitEaten}}
+{\footnotesize\ttfamily int fruit\+Eaten = 1\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{snake_8c_a36bc888083c8234f5a69f5d2adf1cb73}\label{snake_8c_a36bc888083c8234f5a69f5d2adf1cb73}} 
+\index{snake.c@{snake.c}!fruitI@{fruitI}}
+\index{fruitI@{fruitI}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{fruitI}{fruitI}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ fruitI\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{snake_8c_ad7f543910e83181e1cc74959d774829a}\label{snake_8c_ad7f543910e83181e1cc74959d774829a}} 
+\index{snake.c@{snake.c}!gameBG@{gameBG}}
+\index{gameBG@{gameBG}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{gameBG}{gameBG}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ game\+BG\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{snake_8c_ac76be68b581c92c04b6492acdd14fa77}\label{snake_8c_ac76be68b581c92c04b6492acdd14fa77}} 
+\index{snake.c@{snake.c}!GameState@{GameState}}
+\index{GameState@{GameState}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{GameState}{GameState}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{kbc_keys_8h_a275a67132f10277ada3a0ee3d616b647}{STATE}} Game\+State\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{snake_8c_a5b5eb5d335e898555529b3b55819553e}\label{snake_8c_a5b5eb5d335e898555529b3b55819553e}} 
+\index{snake.c@{snake.c}!imgBrick@{imgBrick}}
+\index{imgBrick@{imgBrick}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{imgBrick}{imgBrick}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t img\+Brick\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{snake_8c_a660372536eb896ade5404814260a8b60}\label{snake_8c_a660372536eb896ade5404814260a8b60}} 
+\index{snake.c@{snake.c}!imgBroken@{imgBroken}}
+\index{imgBroken@{imgBroken}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{imgBroken}{imgBroken}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t img\+Broken\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{snake_8c_a7a05ccab5605607541fd6ae1a2db653e}\label{snake_8c_a7a05ccab5605607541fd6ae1a2db653e}} 
+\index{snake.c@{snake.c}!imgCursor@{imgCursor}}
+\index{imgCursor@{imgCursor}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{imgCursor}{imgCursor}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t img\+Cursor\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{snake_8c_a1c1a6de195b2a40415945a8fbdae6638}\label{snake_8c_a1c1a6de195b2a40415945a8fbdae6638}} 
+\index{snake.c@{snake.c}!imgFont@{imgFont}}
+\index{imgFont@{imgFont}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{imgFont}{imgFont}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t img\+Font\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{snake_8c_a4d43b23249d18763f6598631cd28dbcf}\label{snake_8c_a4d43b23249d18763f6598631cd28dbcf}} 
+\index{snake.c@{snake.c}!imgFruit@{imgFruit}}
+\index{imgFruit@{imgFruit}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{imgFruit}{imgFruit}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t img\+Fruit\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{snake_8c_a8a1c771f59a1b5cd014db425439b685d}\label{snake_8c_a8a1c771f59a1b5cd014db425439b685d}} 
+\index{snake.c@{snake.c}!imgGameBG@{imgGameBG}}
+\index{imgGameBG@{imgGameBG}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{imgGameBG}{imgGameBG}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t img\+Game\+BG\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{snake_8c_a5d52304d7fb97310fc7d14997e874f8d}\label{snake_8c_a5d52304d7fb97310fc7d14997e874f8d}} 
+\index{snake.c@{snake.c}!imgSnakeDown@{imgSnakeDown}}
+\index{imgSnakeDown@{imgSnakeDown}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{imgSnakeDown}{imgSnakeDown}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t img\+Snake\+Down\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{snake_8c_a8025693b935412bff292d46c0e98be48}\label{snake_8c_a8025693b935412bff292d46c0e98be48}} 
+\index{snake.c@{snake.c}!imgSnakeLeft@{imgSnakeLeft}}
+\index{imgSnakeLeft@{imgSnakeLeft}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{imgSnakeLeft}{imgSnakeLeft}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t img\+Snake\+Left\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{snake_8c_ae864b3ae77d77ce8bce977bef98dda27}\label{snake_8c_ae864b3ae77d77ce8bce977bef98dda27}} 
+\index{snake.c@{snake.c}!imgSnakeRight@{imgSnakeRight}}
+\index{imgSnakeRight@{imgSnakeRight}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{imgSnakeRight}{imgSnakeRight}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t img\+Snake\+Right\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{snake_8c_ae5751211cd88c89660753e3ed0f896f8}\label{snake_8c_ae5751211cd88c89660753e3ed0f896f8}} 
+\index{snake.c@{snake.c}!imgSnakeTail@{imgSnakeTail}}
+\index{imgSnakeTail@{imgSnakeTail}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{imgSnakeTail}{imgSnakeTail}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t img\+Snake\+Tail\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{snake_8c_a21545b8bdfebeee5d834a27a3b2c47d5}\label{snake_8c_a21545b8bdfebeee5d834a27a3b2c47d5}} 
+\index{snake.c@{snake.c}!imgSnakeUp@{imgSnakeUp}}
+\index{imgSnakeUp@{imgSnakeUp}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{imgSnakeUp}{imgSnakeUp}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t img\+Snake\+Up\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{snake_8c_a8a217079b65d84cda14ad95406ae9ddc}\label{snake_8c_a8a217079b65d84cda14ad95406ae9ddc}} 
+\index{snake.c@{snake.c}!letters@{letters}}
+\index{letters@{letters}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{letters}{letters}}
+{\footnotesize\ttfamily \mbox{\hyperlink{kbc_keys_8h_ab0a8e61dcfdccf29000580179ab166b9}{Character}} letters\mbox{[}40\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{snake_8c_a9e13f6380203ceffdb068b30c6004515}\label{snake_8c_a9e13f6380203ceffdb068b30c6004515}} 
+\index{snake.c@{snake.c}!mouse@{mouse}}
+\index{mouse@{mouse}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{mouse}{mouse}}
+{\footnotesize\ttfamily \mbox{\hyperlink{kbc_keys_8h_af3227f612ec43c954504384a3de25a53}{mouse\+Info}} mouse\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{snake_8c_a3c4b3e5cf461d23de1245627c2280ff6}\label{snake_8c_a3c4b3e5cf461d23de1245627c2280ff6}} 
+\index{snake.c@{snake.c}!mouseUsed@{mouseUsed}}
+\index{mouseUsed@{mouseUsed}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{mouseUsed}{mouseUsed}}
+{\footnotesize\ttfamily int mouse\+Used = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{snake_8c_aa67f77aa4d71da458e0a20c7c4fec1a6}\label{snake_8c_aa67f77aa4d71da458e0a20c7c4fec1a6}} 
+\index{snake.c@{snake.c}!MovAux@{MovAux}}
+\index{MovAux@{MovAux}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{MovAux}{MovAux}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{kbc_keys_8h_a6ae70ce7b1b294c469f11cbabb8f30d6}{KEY}} Mov\+Aux\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{snake_8c_aa2941407eff4b85ccb4bd9a905b7fd6b}\label{snake_8c_aa2941407eff4b85ccb4bd9a905b7fd6b}} 
+\index{snake.c@{snake.c}!MovGeneral@{MovGeneral}}
+\index{MovGeneral@{MovGeneral}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{MovGeneral}{MovGeneral}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{kbc_keys_8h_a6ae70ce7b1b294c469f11cbabb8f30d6}{KEY}} Mov\+General\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{snake_8c_ae6030c61dacb12f2407981efe5a00fbb}\label{snake_8c_ae6030c61dacb12f2407981efe5a00fbb}} 
+\index{snake.c@{snake.c}!numBlocks@{numBlocks}}
+\index{numBlocks@{numBlocks}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{numBlocks}{numBlocks}}
+{\footnotesize\ttfamily int num\+Blocks = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{snake_8c_a972ca76d5a5942770070d1509691fcd5}\label{snake_8c_a972ca76d5a5942770070d1509691fcd5}} 
+\index{snake.c@{snake.c}!numFruits@{numFruits}}
+\index{numFruits@{numFruits}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{numFruits}{numFruits}}
+{\footnotesize\ttfamily int num\+Fruits = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{snake_8c_ae636045b36cdfc8ecc2ebe2be3856ce0}\label{snake_8c_ae636045b36cdfc8ecc2ebe2be3856ce0}} 
+\index{snake.c@{snake.c}!numObjects@{numObjects}}
+\index{numObjects@{numObjects}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{numObjects}{numObjects}}
+{\footnotesize\ttfamily int num\+Objects = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{snake_8c_a05ea269b3c754f114c44a0f27192b2d6}\label{snake_8c_a05ea269b3c754f114c44a0f27192b2d6}} 
+\index{snake.c@{snake.c}!snake@{snake}}
+\index{snake@{snake}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{snake}{snake}}
+{\footnotesize\ttfamily \mbox{\hyperlink{snake_8h_a0791245f0bc890530f6366f1f0e9de9d}{Snake\+Body}} snake\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{snake_8c_a41609a147ca343ddab1c2f69dbc483cd}\label{snake_8c_a41609a147ca343ddab1c2f69dbc483cd}} 
+\index{snake.c@{snake.c}!snakeDown@{snakeDown}}
+\index{snakeDown@{snakeDown}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{snakeDown}{snakeDown}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ snake\+Down\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{snake_8c_afda73f3b72c9bde3b0c4f920cb75c85c}\label{snake_8c_afda73f3b72c9bde3b0c4f920cb75c85c}} 
+\index{snake.c@{snake.c}!snakeLeft@{snakeLeft}}
+\index{snakeLeft@{snakeLeft}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{snakeLeft}{snakeLeft}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ snake\+Left\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{snake_8c_a458aad1a1a2db30bc394639109d02655}\label{snake_8c_a458aad1a1a2db30bc394639109d02655}} 
+\index{snake.c@{snake.c}!snakeRight@{snakeRight}}
+\index{snakeRight@{snakeRight}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{snakeRight}{snakeRight}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ snake\+Right\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{snake_8c_a2fdd2368b1b8a07c82603a2c5fc082a3}\label{snake_8c_a2fdd2368b1b8a07c82603a2c5fc082a3}} 
+\index{snake.c@{snake.c}!snakeTail@{snakeTail}}
+\index{snakeTail@{snakeTail}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{snakeTail}{snakeTail}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ snake\+Tail\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{snake_8c_a31305e142a1111b89972c4deaa5dfeb4}\label{snake_8c_a31305e142a1111b89972c4deaa5dfeb4}} 
+\index{snake.c@{snake.c}!snakeUp@{snakeUp}}
+\index{snakeUp@{snakeUp}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{snakeUp}{snakeUp}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ snake\+Up\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{snake_8c_ab376b87f96a574a793c03c53e75afec8}\label{snake_8c_ab376b87f96a574a793c03c53e75afec8}} 
+\index{snake.c@{snake.c}!start@{start}}
+\index{start@{start}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{start}{start}}
+{\footnotesize\ttfamily bool start = true}
+
+\mbox{\Hypertarget{snake_8c_accacf4e9263030d70ed79f8516c0eac5}\label{snake_8c_accacf4e9263030d70ed79f8516c0eac5}} 
+\index{snake.c@{snake.c}!velocity@{velocity}}
+\index{velocity@{velocity}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{velocity}{velocity}}
+{\footnotesize\ttfamily double velocity\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{snake_8c_ad5bbe8ef94a0b70067e60da76d7485df}\label{snake_8c_ad5bbe8ef94a0b70067e60da76d7485df}} 
+\index{snake.c@{snake.c}!walls@{walls}}
+\index{walls@{walls}!snake.c@{snake.c}}
+\doxysubsubsection{\texorpdfstring{walls}{walls}}
+{\footnotesize\ttfamily \mbox{\hyperlink{snake_8h_aee6fe5e4f0040f46c849d2bd3ac3ceca}{Object}} walls\mbox{[}5000\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+

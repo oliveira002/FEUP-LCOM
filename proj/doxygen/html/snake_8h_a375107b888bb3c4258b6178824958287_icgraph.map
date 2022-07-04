@@ -1,0 +1,8 @@
+<map id="startBlocks" name="startBlocks">
+<area shape="rect" id="node1" title="Function responsible for spawning all the blocks." alt="" coords="776,5,864,32"/>
+<area shape="rect" id="node2" href="$snake_8c.html#a47ef13939f66d01657db71355518bf95" title="Function to handle timer interrupts when the gameState is PLAY_SOLO, is also responsible for printing..." alt="" coords="583,5,728,32"/>
+<area shape="rect" id="node3" href="$game_8c.html#a44e858f7686dc3323d269fe1b22b3d80" title=" " alt="" coords="448,5,535,32"/>
+<area shape="rect" id="node4" href="$game_8c.html#accf20527eb893df42de9caab367d8cbf" title=" " alt="" coords="293,5,400,32"/>
+<area shape="rect" id="node5" href="$game_8c.html#abfbee20b241e7d5bbbef9ab36fb201a4" title=" " alt="" coords="163,5,245,32"/>
+<area shape="rect" id="node6" href="$proj_8c.html#a2a16f651eccbd248e1ad3b3b924b143b" title=" " alt="" coords="5,5,115,32"/>
+</map>

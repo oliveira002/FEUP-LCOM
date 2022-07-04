@@ -1,0 +1,117 @@
+\hypertarget{pause_8h}{}\doxysection{C\+:/\+Users/\+Rui Andrade/\+Documents/\+MINIX-\/\+LCOM/\+Minix Shared Folder/g04/proj/src/pause.h File Reference}
+\label{pause_8h}\index{C:/Users/Rui Andrade/Documents/MINIX-\/LCOM/Minix Shared Folder/g04/proj/src/pause.h@{C:/Users/Rui Andrade/Documents/MINIX-\/LCOM/Minix Shared Folder/g04/proj/src/pause.h}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}kbc\+Keys.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$xpms/resume.\+xpm$>$}\newline
+{\ttfamily \#include $<$xpms/exit\+Pause.\+xpm$>$}\newline
+{\ttfamily \#include \char`\"{}devices/graphics.\+h\char`\"{}}\newline
+Include dependency graph for pause.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pause_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pause_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{pause_8h_a4eae9a915fdabd3b7ce5da6ba01eb9f4}{Pause\+Timer\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em calls function that draws highlighted option if there is any \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{pause_8h_a54e1e892c6677c35be1f65110908f206}{Pause\+Handler\+KBC}} (enum \mbox{\hyperlink{kbc_keys_8h_a6ae70ce7b1b294c469f11cbabb8f30d6}{KEY}} k)
+\begin{DoxyCompactList}\small\item\em is responsible for keeping track of the selected options and changes gamestate if it is chosen \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{pause_8h_a6fd7f58fd5b1307fedba51ee0c61adb4}{draw\+Pause}} (int opt)
+\begin{DoxyCompactList}\small\item\em draws highlighted option \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{pause_8h_a6fd7f58fd5b1307fedba51ee0c61adb4}\label{pause_8h_a6fd7f58fd5b1307fedba51ee0c61adb4}} 
+\index{pause.h@{pause.h}!drawPause@{drawPause}}
+\index{drawPause@{drawPause}!pause.h@{pause.h}}
+\doxysubsubsection{\texorpdfstring{drawPause()}{drawPause()}}
+{\footnotesize\ttfamily void draw\+Pause (\begin{DoxyParamCaption}\item[{int}]{opt }\end{DoxyParamCaption})}
+
+
+
+draws highlighted option 
+
+
+\begin{DoxyParams}{Parameters}
+{\em opt} & -\/ option selected in the menu \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pause_8h_a6fd7f58fd5b1307fedba51ee0c61adb4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pause_8h_a6fd7f58fd5b1307fedba51ee0c61adb4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{pause_8h_a54e1e892c6677c35be1f65110908f206}\label{pause_8h_a54e1e892c6677c35be1f65110908f206}} 
+\index{pause.h@{pause.h}!PauseHandlerKBC@{PauseHandlerKBC}}
+\index{PauseHandlerKBC@{PauseHandlerKBC}!pause.h@{pause.h}}
+\doxysubsubsection{\texorpdfstring{PauseHandlerKBC()}{PauseHandlerKBC()}}
+{\footnotesize\ttfamily void Pause\+Handler\+KBC (\begin{DoxyParamCaption}\item[{enum \mbox{\hyperlink{kbc_keys_8h_a6ae70ce7b1b294c469f11cbabb8f30d6}{KEY}}}]{k }\end{DoxyParamCaption})}
+
+
+
+is responsible for keeping track of the selected options and changes gamestate if it is chosen 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & -\/ key pressed by user \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pause_8h_a54e1e892c6677c35be1f65110908f206_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{pause_8h_a4eae9a915fdabd3b7ce5da6ba01eb9f4}\label{pause_8h_a4eae9a915fdabd3b7ce5da6ba01eb9f4}} 
+\index{pause.h@{pause.h}!PauseTimerHandler@{PauseTimerHandler}}
+\index{PauseTimerHandler@{PauseTimerHandler}!pause.h@{pause.h}}
+\doxysubsubsection{\texorpdfstring{PauseTimerHandler()}{PauseTimerHandler()}}
+{\footnotesize\ttfamily void Pause\+Timer\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+calls function that draws highlighted option if there is any 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pause_8h_a4eae9a915fdabd3b7ce5da6ba01eb9f4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pause_8h_a4eae9a915fdabd3b7ce5da6ba01eb9f4_icgraph}
+\end{center}
+\end{figure}

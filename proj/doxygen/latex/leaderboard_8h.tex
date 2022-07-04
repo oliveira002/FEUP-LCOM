@@ -1,0 +1,134 @@
+\hypertarget{leaderboard_8h}{}\doxysection{C\+:/\+Users/\+Rui Andrade/\+Documents/\+MINIX-\/\+LCOM/\+Minix Shared Folder/g04/proj/src/leaderboard.h File Reference}
+\label{leaderboard_8h}\index{C:/Users/Rui Andrade/Documents/MINIX-\/LCOM/Minix Shared Folder/g04/proj/src/leaderboard.h@{C:/Users/Rui Andrade/Documents/MINIX-\/LCOM/Minix Shared Folder/g04/proj/src/leaderboard.h}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}kbc\+Keys.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$xpms/leader\+Menu.\+xpm$>$}\newline
+{\ttfamily \#include \char`\"{}devices/graphics.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}pause.\+h\char`\"{}}\newline
+Include dependency graph for leaderboard.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{leaderboard_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{leaderboard_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{leaderboard_8h_abe3ebcb86ffcf6a0a1a171efd755b0c7}{leaderboard}} ()
+\begin{DoxyCompactList}\small\item\em function used to read and update the leaderboard text file \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{leaderboard_8h_a0bf1bec503d506d476222ebe2731cbbd}{Board\+Timer\+Handler}} ()
+\item 
+void \mbox{\hyperlink{leaderboard_8h_a740bab07362a43418f952d8ebde19d4d}{Board\+Handler\+KBC}} (enum \mbox{\hyperlink{kbc_keys_8h_a6ae70ce7b1b294c469f11cbabb8f30d6}{KEY}} k)
+\begin{DoxyCompactList}\small\item\em return to menu if user presses escape \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{leaderboard_8h_a435ba4a0d4fc47fbf7b4e13acaa312e4}{draw\+Board}} ()
+\begin{DoxyCompactList}\small\item\em draws leaderboard \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{leaderboard_8h_a1185563e5dae56100003d25db673383b}{draw\+Def\+Board}} ()
+\begin{DoxyCompactList}\small\item\em draws background of leaderboard \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{leaderboard_8h_a740bab07362a43418f952d8ebde19d4d}\label{leaderboard_8h_a740bab07362a43418f952d8ebde19d4d}} 
+\index{leaderboard.h@{leaderboard.h}!BoardHandlerKBC@{BoardHandlerKBC}}
+\index{BoardHandlerKBC@{BoardHandlerKBC}!leaderboard.h@{leaderboard.h}}
+\doxysubsubsection{\texorpdfstring{BoardHandlerKBC()}{BoardHandlerKBC()}}
+{\footnotesize\ttfamily void Board\+Handler\+KBC (\begin{DoxyParamCaption}\item[{enum \mbox{\hyperlink{kbc_keys_8h_a6ae70ce7b1b294c469f11cbabb8f30d6}{KEY}}}]{k }\end{DoxyParamCaption})}
+
+
+
+return to menu if user presses escape 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & -\/ key that user pressed \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{leaderboard_8h_a740bab07362a43418f952d8ebde19d4d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{leaderboard_8h_a0bf1bec503d506d476222ebe2731cbbd}\label{leaderboard_8h_a0bf1bec503d506d476222ebe2731cbbd}} 
+\index{leaderboard.h@{leaderboard.h}!BoardTimerHandler@{BoardTimerHandler}}
+\index{BoardTimerHandler@{BoardTimerHandler}!leaderboard.h@{leaderboard.h}}
+\doxysubsubsection{\texorpdfstring{BoardTimerHandler()}{BoardTimerHandler()}}
+{\footnotesize\ttfamily void Board\+Timer\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{leaderboard_8h_a435ba4a0d4fc47fbf7b4e13acaa312e4}\label{leaderboard_8h_a435ba4a0d4fc47fbf7b4e13acaa312e4}} 
+\index{leaderboard.h@{leaderboard.h}!drawBoard@{drawBoard}}
+\index{drawBoard@{drawBoard}!leaderboard.h@{leaderboard.h}}
+\doxysubsubsection{\texorpdfstring{drawBoard()}{drawBoard()}}
+{\footnotesize\ttfamily void draw\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+draws leaderboard 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{leaderboard_8h_a435ba4a0d4fc47fbf7b4e13acaa312e4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{leaderboard_8h_a435ba4a0d4fc47fbf7b4e13acaa312e4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{leaderboard_8h_a1185563e5dae56100003d25db673383b}\label{leaderboard_8h_a1185563e5dae56100003d25db673383b}} 
+\index{leaderboard.h@{leaderboard.h}!drawDefBoard@{drawDefBoard}}
+\index{drawDefBoard@{drawDefBoard}!leaderboard.h@{leaderboard.h}}
+\doxysubsubsection{\texorpdfstring{drawDefBoard()}{drawDefBoard()}}
+{\footnotesize\ttfamily void draw\+Def\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+draws background of leaderboard 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{leaderboard_8h_a1185563e5dae56100003d25db673383b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{leaderboard_8h_a1185563e5dae56100003d25db673383b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{leaderboard_8h_abe3ebcb86ffcf6a0a1a171efd755b0c7}\label{leaderboard_8h_abe3ebcb86ffcf6a0a1a171efd755b0c7}} 
+\index{leaderboard.h@{leaderboard.h}!leaderboard@{leaderboard}}
+\index{leaderboard@{leaderboard}!leaderboard.h@{leaderboard.h}}
+\doxysubsubsection{\texorpdfstring{leaderboard()}{leaderboard()}}
+{\footnotesize\ttfamily void leaderboard (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+function used to read and update the leaderboard text file 
+

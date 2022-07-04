@@ -1,0 +1,11 @@
+<map id="draw_letter_map" name="draw_letter_map">
+<area shape="rect" id="node1" title="Draws a letter/number from the XPM of the font used." alt="" coords="923,31,1040,57"/>
+<area shape="rect" id="node2" href="$leaderboard_8c.html#a435ba4a0d4fc47fbf7b4e13acaa312e4" title="draws leaderboard" alt="" coords="792,5,875,32"/>
+<area shape="rect" id="node6" href="$snake_8c.html#af895200eed6c62b16871ef2d233a3489" title="Function responsible for drawing the current score of the user on the screen." alt="" coords="792,56,875,83"/>
+<area shape="rect" id="node3" href="$leaderboard_8c.html#a1185563e5dae56100003d25db673383b" title="draws background of leaderboard" alt="" coords="448,5,551,32"/>
+<area shape="rect" id="node4" href="$game_8c.html#abfbee20b241e7d5bbbef9ab36fb201a4" title=" " alt="" coords="163,31,245,57"/>
+<area shape="rect" id="node5" href="$proj_8c.html#a2a16f651eccbd248e1ad3b3b924b143b" title=" " alt="" coords="5,31,115,57"/>
+<area shape="rect" id="node7" href="$snake_8c.html#a47ef13939f66d01657db71355518bf95" title="Function to handle timer interrupts when the gameState is PLAY_SOLO, is also responsible for printing..." alt="" coords="599,56,744,83"/>
+<area shape="rect" id="node8" href="$game_8c.html#a44e858f7686dc3323d269fe1b22b3d80" title=" " alt="" coords="456,56,543,83"/>
+<area shape="rect" id="node9" href="$game_8c.html#accf20527eb893df42de9caab367d8cbf" title=" " alt="" coords="293,56,400,83"/>
+</map>

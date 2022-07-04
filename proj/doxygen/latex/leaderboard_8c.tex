@@ -1,0 +1,176 @@
+\hypertarget{leaderboard_8c}{}\doxysection{C\+:/\+Users/\+Rui Andrade/\+Documents/\+MINIX-\/\+LCOM/\+Minix Shared Folder/g04/proj/src/leaderboard.c File Reference}
+\label{leaderboard_8c}\index{C:/Users/Rui Andrade/Documents/MINIX-\/LCOM/Minix Shared Folder/g04/proj/src/leaderboard.c@{C:/Users/Rui Andrade/Documents/MINIX-\/LCOM/Minix Shared Folder/g04/proj/src/leaderboard.c}}
+{\ttfamily \#include \char`\"{}leaderboard.\+h\char`\"{}}\newline
+Include dependency graph for leaderboard.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{leaderboard_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{leaderboard_8c_a4d12823d0777d6ea86f3c6d948cc5fb8}{leaderboard}} (int Score)
+\item 
+void \mbox{\hyperlink{leaderboard_8c_a0bf1bec503d506d476222ebe2731cbbd}{Board\+Timer\+Handler}} ()
+\item 
+void \mbox{\hyperlink{leaderboard_8c_a740bab07362a43418f952d8ebde19d4d}{Board\+Handler\+KBC}} (enum \mbox{\hyperlink{kbc_keys_8h_a6ae70ce7b1b294c469f11cbabb8f30d6}{KEY}} k)
+\begin{DoxyCompactList}\small\item\em return to menu if user presses escape \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{leaderboard_8c_a1185563e5dae56100003d25db673383b}{draw\+Def\+Board}} ()
+\begin{DoxyCompactList}\small\item\em draws background of leaderboard \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{leaderboard_8c_a435ba4a0d4fc47fbf7b4e13acaa312e4}{draw\+Board}} ()
+\begin{DoxyCompactList}\small\item\em draws leaderboard \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{kbc_keys_8h_a275a67132f10277ada3a0ee3d616b647}{STATE}} \mbox{\hyperlink{leaderboard_8c_ac76be68b581c92c04b6492acdd14fa77}{Game\+State}}
+\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{leaderboard_8c_a5fb81d809f024155a0d763282d1037d6}{Board\+Menu}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{leaderboard_8c_a820f685d52ae522ef30b4530edc859ea}{img\+Board}}
+\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{leaderboard_8c_a8a01ead0fa516e966b41146f79df6809}{font}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{leaderboard_8c_a1c1a6de195b2a40415945a8fbdae6638}{img\+Font}}
+\item 
+\mbox{\hyperlink{kbc_keys_8h_ab0a8e61dcfdccf29000580179ab166b9}{Character}} \mbox{\hyperlink{leaderboard_8c_a8a217079b65d84cda14ad95406ae9ddc}{letters}} \mbox{[}40\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{leaderboard_8c_a740bab07362a43418f952d8ebde19d4d}\label{leaderboard_8c_a740bab07362a43418f952d8ebde19d4d}} 
+\index{leaderboard.c@{leaderboard.c}!BoardHandlerKBC@{BoardHandlerKBC}}
+\index{BoardHandlerKBC@{BoardHandlerKBC}!leaderboard.c@{leaderboard.c}}
+\doxysubsubsection{\texorpdfstring{BoardHandlerKBC()}{BoardHandlerKBC()}}
+{\footnotesize\ttfamily void Board\+Handler\+KBC (\begin{DoxyParamCaption}\item[{enum \mbox{\hyperlink{kbc_keys_8h_a6ae70ce7b1b294c469f11cbabb8f30d6}{KEY}}}]{k }\end{DoxyParamCaption})}
+
+
+
+return to menu if user presses escape 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & -\/ key that user pressed \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{leaderboard_8c_a740bab07362a43418f952d8ebde19d4d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{leaderboard_8c_a0bf1bec503d506d476222ebe2731cbbd}\label{leaderboard_8c_a0bf1bec503d506d476222ebe2731cbbd}} 
+\index{leaderboard.c@{leaderboard.c}!BoardTimerHandler@{BoardTimerHandler}}
+\index{BoardTimerHandler@{BoardTimerHandler}!leaderboard.c@{leaderboard.c}}
+\doxysubsubsection{\texorpdfstring{BoardTimerHandler()}{BoardTimerHandler()}}
+{\footnotesize\ttfamily void Board\+Timer\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{leaderboard_8c_a435ba4a0d4fc47fbf7b4e13acaa312e4}\label{leaderboard_8c_a435ba4a0d4fc47fbf7b4e13acaa312e4}} 
+\index{leaderboard.c@{leaderboard.c}!drawBoard@{drawBoard}}
+\index{drawBoard@{drawBoard}!leaderboard.c@{leaderboard.c}}
+\doxysubsubsection{\texorpdfstring{drawBoard()}{drawBoard()}}
+{\footnotesize\ttfamily void draw\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+draws leaderboard 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{leaderboard_8c_a435ba4a0d4fc47fbf7b4e13acaa312e4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{leaderboard_8c_a435ba4a0d4fc47fbf7b4e13acaa312e4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{leaderboard_8c_a1185563e5dae56100003d25db673383b}\label{leaderboard_8c_a1185563e5dae56100003d25db673383b}} 
+\index{leaderboard.c@{leaderboard.c}!drawDefBoard@{drawDefBoard}}
+\index{drawDefBoard@{drawDefBoard}!leaderboard.c@{leaderboard.c}}
+\doxysubsubsection{\texorpdfstring{drawDefBoard()}{drawDefBoard()}}
+{\footnotesize\ttfamily void draw\+Def\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+draws background of leaderboard 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{leaderboard_8c_a1185563e5dae56100003d25db673383b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{leaderboard_8c_a1185563e5dae56100003d25db673383b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{leaderboard_8c_a4d12823d0777d6ea86f3c6d948cc5fb8}\label{leaderboard_8c_a4d12823d0777d6ea86f3c6d948cc5fb8}} 
+\index{leaderboard.c@{leaderboard.c}!leaderboard@{leaderboard}}
+\index{leaderboard@{leaderboard}!leaderboard.c@{leaderboard.c}}
+\doxysubsubsection{\texorpdfstring{leaderboard()}{leaderboard()}}
+{\footnotesize\ttfamily void leaderboard (\begin{DoxyParamCaption}\item[{int}]{Score }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{leaderboard_8c_a4d12823d0777d6ea86f3c6d948cc5fb8_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{leaderboard_8c_a5fb81d809f024155a0d763282d1037d6}\label{leaderboard_8c_a5fb81d809f024155a0d763282d1037d6}} 
+\index{leaderboard.c@{leaderboard.c}!BoardMenu@{BoardMenu}}
+\index{BoardMenu@{BoardMenu}!leaderboard.c@{leaderboard.c}}
+\doxysubsubsection{\texorpdfstring{BoardMenu}{BoardMenu}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ Board\+Menu\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{leaderboard_8c_a8a01ead0fa516e966b41146f79df6809}\label{leaderboard_8c_a8a01ead0fa516e966b41146f79df6809}} 
+\index{leaderboard.c@{leaderboard.c}!font@{font}}
+\index{font@{font}!leaderboard.c@{leaderboard.c}}
+\doxysubsubsection{\texorpdfstring{font}{font}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ font\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{leaderboard_8c_ac76be68b581c92c04b6492acdd14fa77}\label{leaderboard_8c_ac76be68b581c92c04b6492acdd14fa77}} 
+\index{leaderboard.c@{leaderboard.c}!GameState@{GameState}}
+\index{GameState@{GameState}!leaderboard.c@{leaderboard.c}}
+\doxysubsubsection{\texorpdfstring{GameState}{GameState}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{kbc_keys_8h_a275a67132f10277ada3a0ee3d616b647}{STATE}} Game\+State\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{leaderboard_8c_a820f685d52ae522ef30b4530edc859ea}\label{leaderboard_8c_a820f685d52ae522ef30b4530edc859ea}} 
+\index{leaderboard.c@{leaderboard.c}!imgBoard@{imgBoard}}
+\index{imgBoard@{imgBoard}!leaderboard.c@{leaderboard.c}}
+\doxysubsubsection{\texorpdfstring{imgBoard}{imgBoard}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t img\+Board\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{leaderboard_8c_a1c1a6de195b2a40415945a8fbdae6638}\label{leaderboard_8c_a1c1a6de195b2a40415945a8fbdae6638}} 
+\index{leaderboard.c@{leaderboard.c}!imgFont@{imgFont}}
+\index{imgFont@{imgFont}!leaderboard.c@{leaderboard.c}}
+\doxysubsubsection{\texorpdfstring{imgFont}{imgFont}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t img\+Font\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{leaderboard_8c_a8a217079b65d84cda14ad95406ae9ddc}\label{leaderboard_8c_a8a217079b65d84cda14ad95406ae9ddc}} 
+\index{leaderboard.c@{leaderboard.c}!letters@{letters}}
+\index{letters@{letters}!leaderboard.c@{leaderboard.c}}
+\doxysubsubsection{\texorpdfstring{letters}{letters}}
+{\footnotesize\ttfamily \mbox{\hyperlink{kbc_keys_8h_ab0a8e61dcfdccf29000580179ab166b9}{Character}} letters\mbox{[}40\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+

@@ -1,0 +1,20 @@
+<map id="draw_pix_map" name="draw_pix_map">
+<area shape="rect" id="node1" title="Draws the XPM on the screen." alt="" coords="919,183,1024,209"/>
+<area shape="rect" id="node2" href="$snake_8c.html#a01311dd183a0158bb4da61b69ac2fb0a" title="Function responsible for drawing the background of the game." alt="" coords="313,5,381,32"/>
+<area shape="rect" id="node5" href="$menu_8c.html#af8d7cbfa968959baff86edbd3ca36c01" title="draws mouse cursor" alt="" coords="780,259,867,285"/>
+<area shape="rect" id="node9" href="$leaderboard_8c.html#a1185563e5dae56100003d25db673383b" title="draws background of leaderboard" alt="" coords="295,56,398,83"/>
+<area shape="rect" id="node10" href="$menu_8c.html#abd24e9d6431234da5e2a5bdca2e0e2f7" title="draws background of menu" alt="" coords="605,107,705,133"/>
+<area shape="rect" id="node11" href="$menu_8c.html#aa13653318c21b0e6b86838e6091bfc9a" title="draws with the selected option highlighted" alt="" coords="783,208,864,235"/>
+<area shape="rect" id="node12" href="$snake_8c.html#af5808b10d2bfc050eb76e8d07055f46e" title="Function responsible for drawing all the objects of the game and also the mouse." alt="" coords="776,360,871,387"/>
+<area shape="rect" id="node15" href="$pause_8c.html#a6fd7f58fd5b1307fedba51ee0c61adb4" title="draws highlighted option" alt="" coords="780,157,867,184"/>
+<area shape="rect" id="node18" href="$snake_8c.html#a4f4cdc5a6b882a5f3d7776e40a2fa505" title="Function responsible for drawing the snake, taking in account the direction it is going." alt="" coords="780,309,867,336"/>
+<area shape="rect" id="node3" href="$game_8c.html#abfbee20b241e7d5bbbef9ab36fb201a4" title=" " alt="" coords="163,81,245,108"/>
+<area shape="rect" id="node4" href="$proj_8c.html#a2a16f651eccbd248e1ad3b3b924b143b" title=" " alt="" coords="5,81,115,108"/>
+<area shape="rect" id="node6" href="$menu_8c.html#a0533d8a17655a42328d57d705e7759d1" title="refreshes the menu screen with the update mouse position" alt="" coords="590,208,721,235"/>
+<area shape="rect" id="node7" href="$game_8c.html#ad209d47184f4f1b4f5be0fa5ef6c7557" title=" " alt="" coords="458,208,525,235"/>
+<area shape="rect" id="node8" href="$game_8c.html#accf20527eb893df42de9caab367d8cbf" title=" " alt="" coords="293,183,400,209"/>
+<area shape="rect" id="node13" href="$snake_8c.html#a47ef13939f66d01657db71355518bf95" title="Function to handle timer interrupts when the gameState is PLAY_SOLO, is also responsible for printing..." alt="" coords="583,309,728,336"/>
+<area shape="rect" id="node14" href="$game_8c.html#a44e858f7686dc3323d269fe1b22b3d80" title=" " alt="" coords="448,284,535,311"/>
+<area shape="rect" id="node16" href="$pause_8c.html#a4eae9a915fdabd3b7ce5da6ba01eb9f4" title="calls function that draws highlighted option if there is any" alt="" coords="588,157,723,184"/>
+<area shape="rect" id="node17" href="$game_8c.html#a1e9cc9084b63d99e8126b3c8a4b35d45" title=" " alt="" coords="456,157,527,184"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="PauseTimerHandler" name="PauseTimerHandler">
+<area shape="rect" id="node1" title="calls function that draws highlighted option if there is any" alt="" coords="5,5,140,32"/>
+<area shape="rect" id="node2" href="$pause_8c.html#a6fd7f58fd5b1307fedba51ee0c61adb4" title="draws highlighted option" alt="" coords="188,5,275,32"/>
+<area shape="rect" id="node3" href="$graphics_8c.html#a496843f365959ef8c821e47493dc6be7" title="Draws the XPM on the screen." alt="" coords="323,5,428,32"/>
+<area shape="rect" id="node4" href="$graphics_8c.html#a08c498ffeb0a3962e3b7711b57397741" title=" " alt="" coords="476,5,579,32"/>
+</map>

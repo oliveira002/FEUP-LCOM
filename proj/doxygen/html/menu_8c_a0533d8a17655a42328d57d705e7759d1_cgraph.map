@@ -1,0 +1,9 @@
+<map id="MenuTimerHandler" name="MenuTimerHandler">
+<area shape="rect" id="node1" title="refreshes the menu screen with the update mouse position" alt="" coords="5,56,136,83"/>
+<area shape="rect" id="node2" href="$menu_8c.html#a0921c0ead7a0407b4bb3ab368b790efb" title="erases the text and cursor from the menu" alt="" coords="184,5,288,32"/>
+<area shape="rect" id="node5" href="$menu_8c.html#af8d7cbfa968959baff86edbd3ca36c01" title="draws mouse cursor" alt="" coords="193,56,279,83"/>
+<area shape="rect" id="node7" href="$menu_8c.html#aa13653318c21b0e6b86838e6091bfc9a" title="draws with the selected option highlighted" alt="" coords="195,107,277,133"/>
+<area shape="rect" id="node3" href="$graphics_8c.html#a98bdad3662edea366e432270b278cc4b" title="Clears the XPM on the screen by paiting the background." alt="" coords="353,5,425,32"/>
+<area shape="rect" id="node4" href="$graphics_8c.html#a08c498ffeb0a3962e3b7711b57397741" title=" " alt="" coords="489,31,592,57"/>
+<area shape="rect" id="node6" href="$graphics_8c.html#a496843f365959ef8c821e47493dc6be7" title="Draws the XPM on the screen." alt="" coords="336,56,441,83"/>
+</map>

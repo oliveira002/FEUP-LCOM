@@ -1,0 +1,102 @@
+\hypertarget{game_8h_source}{}\doxysection{game.\+h}
+\label{game_8h_source}\index{C:/Users/Rui Andrade/Documents/MINIX-\/LCOM/Minix Shared Folder/g04/proj/src/game.h@{C:/Users/Rui Andrade/Documents/MINIX-\/LCOM/Minix Shared Folder/g04/proj/src/game.h}}
+\mbox{\hyperlink{game_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef \_SNAKE\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define \_SNAKE\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <lcom/lcf.h>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <stdbool.h>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <stdint.h>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{keyboard_8h}{devices/keyboard.h}}"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{mouse_8h}{devices/mouse.h}}"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{snake_8h}{snake.h}}"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{menu_8h}{menu.h}}"{}}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{pause_8h}{pause.h}}"{}}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{kbc_keys_8h}{kbcKeys.h}}"{}}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{graphics_8h}{devices/graphics.h}}"{}}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{leaderboard_8h}{leaderboard.h}}"{}}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{keyword}{enum} \mbox{\hyperlink{game_8h_a833b28f90e109607cd5d9e826474893a}{DEVICE}}\{}
+\DoxyCodeLine{18   \mbox{\hyperlink{game_8h_a833b28f90e109607cd5d9e826474893aa74ac60f101b84bf20ad232e801f4a403}{KBC}},}
+\DoxyCodeLine{19   \mbox{\hyperlink{game_8h_a833b28f90e109607cd5d9e826474893aa17ba9bae1b8d7e8d6c12d46ec58e0769}{TIMER}},}
+\DoxyCodeLine{20   \mbox{\hyperlink{game_8h_a833b28f90e109607cd5d9e826474893aa6abd13b0a6bf7894c7ceb5ff45ddbc14}{MOUSE}},}
+\DoxyCodeLine{21   \mbox{\hyperlink{game_8h_a833b28f90e109607cd5d9e826474893aa24073a11916b946561b8cb5c9dfe9bce}{RTC}},}
+\DoxyCodeLine{22   \mbox{\hyperlink{game_8h_a833b28f90e109607cd5d9e826474893aa8df0c8afbdfe2658d92b9393feb141cd}{SERIAL\_PORT}}}
+\DoxyCodeLine{23 \};}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{comment}{/*}}
+\DoxyCodeLine{27 \textcolor{comment}{ * @brief Function responsible for handling all the interrupts, where the driver\_receiver loop takes place. Basically the loop of the game}}
+\DoxyCodeLine{28 \textcolor{comment}{ */}}
+\DoxyCodeLine{29 \textcolor{keywordtype}{void} \mbox{\hyperlink{game_8h_abfbee20b241e7d5bbbef9ab36fb201a4}{gameLoop}}();}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \textcolor{comment}{/*}}
+\DoxyCodeLine{32 \textcolor{comment}{ * @brief}}
+\DoxyCodeLine{33 \textcolor{comment}{ * @param device, the device of the interrupt}}
+\DoxyCodeLine{34 \textcolor{comment}{ */}}
+\DoxyCodeLine{35 \textcolor{keywordtype}{void} \mbox{\hyperlink{game_8h_accf20527eb893df42de9caab367d8cbf}{InterruptRouter}}(\textcolor{keyword}{enum} \mbox{\hyperlink{game_8h_a833b28f90e109607cd5d9e826474893a}{DEVICE}} device);}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \textcolor{comment}{/*}}
+\DoxyCodeLine{38 \textcolor{comment}{ * @brief Responsible for handling all the interrupts of the Menu State}}
+\DoxyCodeLine{39 \textcolor{comment}{ * @param device, the device of the interrupt}}
+\DoxyCodeLine{40 \textcolor{comment}{ */}}
+\DoxyCodeLine{41 \textcolor{keywordtype}{void} \mbox{\hyperlink{game_8h_ad209d47184f4f1b4f5be0fa5ef6c7557}{MenuIH}}(\textcolor{keyword}{enum} \mbox{\hyperlink{game_8h_a833b28f90e109607cd5d9e826474893a}{DEVICE}} device);}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{comment}{/*}}
+\DoxyCodeLine{44 \textcolor{comment}{ * @brief Responsible for handling all the interrupts of the PauseMenu State}}
+\DoxyCodeLine{45 \textcolor{comment}{ * @param device, the device of the interrupt}}
+\DoxyCodeLine{46 \textcolor{comment}{ */}}
+\DoxyCodeLine{47 \textcolor{keywordtype}{void} \mbox{\hyperlink{game_8h_a1e9cc9084b63d99e8126b3c8a4b35d45}{PauseIH}}(\textcolor{keyword}{enum} \mbox{\hyperlink{game_8h_a833b28f90e109607cd5d9e826474893a}{DEVICE}} device);}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 \textcolor{comment}{/*}}
+\DoxyCodeLine{50 \textcolor{comment}{ * @brief Responsible for handling all the interrupts of the Play\_Solo State}}
+\DoxyCodeLine{51 \textcolor{comment}{ * @param device, the device of the interrupt}}
+\DoxyCodeLine{52 \textcolor{comment}{ */}}
+\DoxyCodeLine{53 \textcolor{keywordtype}{void} \mbox{\hyperlink{game_8h_a44e858f7686dc3323d269fe1b22b3d80}{PlaySoloIH}}(\textcolor{keyword}{enum} \mbox{\hyperlink{game_8h_a833b28f90e109607cd5d9e826474893a}{DEVICE}} device);}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56 \textcolor{comment}{/*}}
+\DoxyCodeLine{57 \textcolor{comment}{ * @brief Responsible for handling all the interrupts of the Multiplayer State}}
+\DoxyCodeLine{58 \textcolor{comment}{ * @param device, the device of the interrupt}}
+\DoxyCodeLine{59 \textcolor{comment}{ */}}
+\DoxyCodeLine{60 \textcolor{keywordtype}{void} \mbox{\hyperlink{game_8h_af99d78333e1c47e51b6bfdc31720305a}{PlayMultiplayerIH}}(\textcolor{keyword}{enum} \mbox{\hyperlink{game_8h_a833b28f90e109607cd5d9e826474893a}{DEVICE}} device);}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62 \textcolor{comment}{/*}}
+\DoxyCodeLine{63 \textcolor{comment}{ * @brief Responsible for handling all the interrupts of the Dead State}}
+\DoxyCodeLine{64 \textcolor{comment}{ * @param device, the device of the interrupt}}
+\DoxyCodeLine{65 \textcolor{comment}{ */}}
+\DoxyCodeLine{66 \textcolor{keywordtype}{void} \mbox{\hyperlink{game_8h_a47dca95cf818b3bc7352c1757bd92f2d}{DeadIH}}(\textcolor{keyword}{enum} \mbox{\hyperlink{game_8h_a833b28f90e109607cd5d9e826474893a}{DEVICE}} device);}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69 \textcolor{comment}{/*}}
+\DoxyCodeLine{70 \textcolor{comment}{ * @brief Responsible for handling all the interrupts of the Play\_Solo State}}
+\DoxyCodeLine{71 \textcolor{comment}{ * @param device, the device of the interrupt}}
+\DoxyCodeLine{72 \textcolor{comment}{ */}}
+\DoxyCodeLine{73 \textcolor{keywordtype}{void} \mbox{\hyperlink{game_8h_a10fc1dbcd95e686e18e42b4e7826ffa9}{changePosition}}();}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75 \textcolor{comment}{/*}}
+\DoxyCodeLine{76 \textcolor{comment}{ * @brief Responsible for input key of the user, and passing it to the GameState}}
+\DoxyCodeLine{77 \textcolor{comment}{ */}}
+\DoxyCodeLine{78 \textcolor{keywordtype}{void} \mbox{\hyperlink{game_8h_a85c95f0f803cb3ce36affb5c221a0b5f}{updateKBC}}();}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80 \textcolor{comment}{/*}}
+\DoxyCodeLine{81 \textcolor{comment}{ * @brief Responsible for loading all the XPM's (optimize performance)}}
+\DoxyCodeLine{82 \textcolor{comment}{ */}}
+\DoxyCodeLine{83 \textcolor{keywordtype}{void} \mbox{\hyperlink{game_8h_ac3e4b631b5afb632e0bb3d2355022b55}{loadAll}}();}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85 \textcolor{comment}{/*}}
+\DoxyCodeLine{86 \textcolor{comment}{ * @brief Inits all the letters of the alphabet and stores them in an array. (From the XPM font)}}
+\DoxyCodeLine{87 \textcolor{comment}{ */}}
+\DoxyCodeLine{88 \textcolor{keywordtype}{void} \mbox{\hyperlink{game_8h_aaac5cec6ab8daf8b688538a972973fb2}{initLetters}}();}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{90 \textcolor{comment}{/*}}
+\DoxyCodeLine{91 \textcolor{comment}{ * @brief Responsible for handling all the interrupts of the LeaderBoard State}}
+\DoxyCodeLine{92 \textcolor{comment}{ * @param device, the device of the interrupt}}
+\DoxyCodeLine{93 \textcolor{comment}{ */}}
+\DoxyCodeLine{94 \textcolor{keywordtype}{void} \mbox{\hyperlink{game_8h_a27532029ebb339dae5994d7f5d8cb3cb}{BoardIH}}(\textcolor{keyword}{enum} \mbox{\hyperlink{game_8h_a833b28f90e109607cd5d9e826474893a}{DEVICE}} device);}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{96 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

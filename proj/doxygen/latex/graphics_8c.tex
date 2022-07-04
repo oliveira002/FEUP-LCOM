@@ -1,0 +1,407 @@
+\hypertarget{graphics_8c}{}\doxysection{C\+:/\+Users/\+Rui Andrade/\+Documents/\+MINIX-\/\+LCOM/\+Minix Shared Folder/g04/proj/src/devices/graphics.c File Reference}
+\label{graphics_8c}\index{C:/Users/Rui Andrade/Documents/MINIX-\/LCOM/Minix Shared Folder/g04/proj/src/devices/graphics.c@{C:/Users/Rui Andrade/Documents/MINIX-\/LCOM/Minix Shared Folder/g04/proj/src/devices/graphics.c}}
+{\ttfamily \#include \char`\"{}graphics.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+Include dependency graph for graphics.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{graphics_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int() \mbox{\hyperlink{graphics_8c_ab15a07157365105e6e15d0ae87e9cb6d}{video\+\_\+set\+\_\+graphics}} (uint16\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em sets the video graphics mode and maps the memory \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{graphics_8c_a08c498ffeb0a3962e3b7711b57397741}{vg\+\_\+draw\+\_\+pixel}} (uint16\+\_\+t x, uint16\+\_\+t y, uint32\+\_\+t color)
+\item 
+int() \mbox{\hyperlink{graphics_8c_a5e5b25bd525250f61f40b9e9f212d5e6}{vg\+\_\+draw\+\_\+hline}} (uint16\+\_\+t x, uint16\+\_\+t y, uint16\+\_\+t len, uint32\+\_\+t color)
+\item 
+int() \mbox{\hyperlink{graphics_8c_a99d2da2559e11200c6b40c469e9977ec}{vg\+\_\+draw\+\_\+rectangle}} (uint16\+\_\+t x, uint16\+\_\+t y, uint16\+\_\+t width, uint16\+\_\+t height, uint32\+\_\+t color)
+\item 
+int() \mbox{\hyperlink{graphics_8c_a3d637ba6438c3c79c0eafe641a2637d4}{vg\+\_\+draw\+\_\+matrix}} (uint16\+\_\+t mode, uint8\+\_\+t no\+\_\+rectangles, uint32\+\_\+t first, uint8\+\_\+t step)
+\begin{DoxyCompactList}\small\item\em draws the pallete for indexed mode \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{graphics_8c_a496843f365959ef8c821e47493dc6be7}{draw\+\_\+pix\+\_\+map}} (uint16\+\_\+t x, uint16\+\_\+t y, uint8\+\_\+t $\ast$map, xpm\+\_\+image\+\_\+t img)
+\begin{DoxyCompactList}\small\item\em Draws the XPM on the screen. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{graphics_8c_a3111ea21013ad9656c7795b4d491b984}{draw\+\_\+letter\+\_\+map}} (uint16\+\_\+t x, uint16\+\_\+t y, uint8\+\_\+t $\ast$map, xpm\+\_\+image\+\_\+t img, unsigned int startX, unsigned int startY)
+\begin{DoxyCompactList}\small\item\em Draws a letter/number from the XPM of the font used. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{graphics_8c_a1559628d6c717b11b21455eaeeffe06b}{clear\+\_\+pix\+\_\+map}} (uint16\+\_\+t x, uint16\+\_\+t y, xpm\+\_\+image\+\_\+t img)
+\begin{DoxyCompactList}\small\item\em Clears the XPM on the screen by paiting the background. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphics_8c_a616d84037516eeeebf36a0ca870302b1}{switch\+Buffer}} ()
+\begin{DoxyCompactList}\small\item\em Used for the Double Buffering. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphics_8c_a98bdad3662edea366e432270b278cc4b}{clean\+BG}} (unsigned int x, unsigned int y, int width, int height, xpm\+\_\+image\+\_\+t img, uint8\+\_\+t $\ast$map)
+\begin{DoxyCompactList}\small\item\em Clears the XPM on the screen by paiting the background. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphics_8c_a62f0028869c2b74dbe203e22ab8b424e}{exit\+\_\+graphics}} ()
+\begin{DoxyCompactList}\small\item\em Makes minix go back to TEXT Mode \& frees the buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static char $\ast$ \mbox{\hyperlink{graphics_8c_a93a24e067b9083bed6fb5c0336fd7a01}{video\+\_\+mem}}
+\item 
+static char $\ast$ \mbox{\hyperlink{graphics_8c_aff2566f4c366b48d73479bef43ee4d2e}{buffer}}
+\item 
+static unsigned \mbox{\hyperlink{graphics_8c_a43e7e5a0a8f9069e6413b2066ca52f3e}{h\+\_\+res}}
+\item 
+static unsigned \mbox{\hyperlink{graphics_8c_a5bda1b499253a8fbf3cab646f8760391}{v\+\_\+res}}
+\item 
+static unsigned int \mbox{\hyperlink{graphics_8c_a6682c6bd965e44d2880453dd6ea872ce}{bytes\+\_\+per\+\_\+pixel}}
+\item 
+static unsigned int \mbox{\hyperlink{graphics_8c_abd89d1c2107fd85e60b7143c06eb0a24}{bits\+\_\+per\+\_\+pixel}}
+\item 
+vbe\+\_\+mode\+\_\+info\+\_\+t \mbox{\hyperlink{graphics_8c_a0cb3d0ba34458283fd5bfe568bc6b2ac}{info}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{graphics_8c_a98bdad3662edea366e432270b278cc4b}\label{graphics_8c_a98bdad3662edea366e432270b278cc4b}} 
+\index{graphics.c@{graphics.c}!cleanBG@{cleanBG}}
+\index{cleanBG@{cleanBG}!graphics.c@{graphics.c}}
+\doxysubsubsection{\texorpdfstring{cleanBG()}{cleanBG()}}
+{\footnotesize\ttfamily void clean\+BG (\begin{DoxyParamCaption}\item[{unsigned int}]{x,  }\item[{unsigned int}]{y,  }\item[{int}]{width,  }\item[{int}]{height,  }\item[{xpm\+\_\+image\+\_\+t}]{img,  }\item[{uint8\+\_\+t $\ast$}]{map }\end{DoxyParamCaption})}
+
+
+
+Clears the XPM on the screen by paiting the background. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em width} & \\
+\hline
+{\em height} & \\
+\hline
+{\em img} & \\
+\hline
+{\em map} & \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{graphics_8c_a98bdad3662edea366e432270b278cc4b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{graphics_8c_a98bdad3662edea366e432270b278cc4b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{graphics_8c_a1559628d6c717b11b21455eaeeffe06b}\label{graphics_8c_a1559628d6c717b11b21455eaeeffe06b}} 
+\index{graphics.c@{graphics.c}!clear\_pix\_map@{clear\_pix\_map}}
+\index{clear\_pix\_map@{clear\_pix\_map}!graphics.c@{graphics.c}}
+\doxysubsubsection{\texorpdfstring{clear\_pix\_map()}{clear\_pix\_map()}}
+{\footnotesize\ttfamily int() clear\+\_\+pix\+\_\+map (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y,  }\item[{xpm\+\_\+image\+\_\+t}]{img }\end{DoxyParamCaption})}
+
+
+
+Clears the XPM on the screen by paiting the background. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em img} & (background xpm IMG) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success, 1 otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{graphics_8c_a1559628d6c717b11b21455eaeeffe06b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{graphics_8c_a3111ea21013ad9656c7795b4d491b984}\label{graphics_8c_a3111ea21013ad9656c7795b4d491b984}} 
+\index{graphics.c@{graphics.c}!draw\_letter\_map@{draw\_letter\_map}}
+\index{draw\_letter\_map@{draw\_letter\_map}!graphics.c@{graphics.c}}
+\doxysubsubsection{\texorpdfstring{draw\_letter\_map()}{draw\_letter\_map()}}
+{\footnotesize\ttfamily int() draw\+\_\+letter\+\_\+map (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y,  }\item[{uint8\+\_\+t $\ast$}]{map,  }\item[{xpm\+\_\+image\+\_\+t}]{img,  }\item[{unsigned int}]{startX,  }\item[{unsigned int}]{startY }\end{DoxyParamCaption})}
+
+
+
+Draws a letter/number from the XPM of the font used. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & (coordenada x no ecrã) \\
+\hline
+{\em y} & (coordenada y no ecrã) \\
+\hline
+{\em map} & (coordenada y no ecrã) \\
+\hline
+{\em img} & (coordenada y no ecrã) \\
+\hline
+{\em startX} & (coordenada x no xpm) \\
+\hline
+{\em startY} & (coordenada y no xpm) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success, 1 otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=281pt]{graphics_8c_a3111ea21013ad9656c7795b4d491b984_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{graphics_8c_a3111ea21013ad9656c7795b4d491b984_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{graphics_8c_a496843f365959ef8c821e47493dc6be7}\label{graphics_8c_a496843f365959ef8c821e47493dc6be7}} 
+\index{graphics.c@{graphics.c}!draw\_pix\_map@{draw\_pix\_map}}
+\index{draw\_pix\_map@{draw\_pix\_map}!graphics.c@{graphics.c}}
+\doxysubsubsection{\texorpdfstring{draw\_pix\_map()}{draw\_pix\_map()}}
+{\footnotesize\ttfamily int() draw\+\_\+pix\+\_\+map (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y,  }\item[{uint8\+\_\+t $\ast$}]{map,  }\item[{xpm\+\_\+image\+\_\+t}]{img }\end{DoxyParamCaption})}
+
+
+
+Draws the XPM on the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em map} & \\
+\hline
+{\em img} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success, 1 otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{graphics_8c_a496843f365959ef8c821e47493dc6be7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{graphics_8c_a496843f365959ef8c821e47493dc6be7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{graphics_8c_a62f0028869c2b74dbe203e22ab8b424e}\label{graphics_8c_a62f0028869c2b74dbe203e22ab8b424e}} 
+\index{graphics.c@{graphics.c}!exit\_graphics@{exit\_graphics}}
+\index{exit\_graphics@{exit\_graphics}!graphics.c@{graphics.c}}
+\doxysubsubsection{\texorpdfstring{exit\_graphics()}{exit\_graphics()}}
+{\footnotesize\ttfamily void exit\+\_\+graphics (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Makes minix go back to TEXT Mode \& frees the buffer. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{graphics_8c_a62f0028869c2b74dbe203e22ab8b424e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{graphics_8c_a616d84037516eeeebf36a0ca870302b1}\label{graphics_8c_a616d84037516eeeebf36a0ca870302b1}} 
+\index{graphics.c@{graphics.c}!switchBuffer@{switchBuffer}}
+\index{switchBuffer@{switchBuffer}!graphics.c@{graphics.c}}
+\doxysubsubsection{\texorpdfstring{switchBuffer()}{switchBuffer()}}
+{\footnotesize\ttfamily void switch\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Used for the Double Buffering. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{graphics_8c_a616d84037516eeeebf36a0ca870302b1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{graphics_8c_a5e5b25bd525250f61f40b9e9f212d5e6}\label{graphics_8c_a5e5b25bd525250f61f40b9e9f212d5e6}} 
+\index{graphics.c@{graphics.c}!vg\_draw\_hline@{vg\_draw\_hline}}
+\index{vg\_draw\_hline@{vg\_draw\_hline}!graphics.c@{graphics.c}}
+\doxysubsubsection{\texorpdfstring{vg\_draw\_hline()}{vg\_draw\_hline()}}
+{\footnotesize\ttfamily int() vg\+\_\+draw\+\_\+hline (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y,  }\item[{uint16\+\_\+t}]{len,  }\item[{uint32\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{graphics_8c_a5e5b25bd525250f61f40b9e9f212d5e6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{graphics_8c_a5e5b25bd525250f61f40b9e9f212d5e6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{graphics_8c_a3d637ba6438c3c79c0eafe641a2637d4}\label{graphics_8c_a3d637ba6438c3c79c0eafe641a2637d4}} 
+\index{graphics.c@{graphics.c}!vg\_draw\_matrix@{vg\_draw\_matrix}}
+\index{vg\_draw\_matrix@{vg\_draw\_matrix}!graphics.c@{graphics.c}}
+\doxysubsubsection{\texorpdfstring{vg\_draw\_matrix()}{vg\_draw\_matrix()}}
+{\footnotesize\ttfamily int() vg\+\_\+draw\+\_\+matrix (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{mode,  }\item[{uint8\+\_\+t}]{no\+\_\+rectangles,  }\item[{uint32\+\_\+t}]{first,  }\item[{uint8\+\_\+t}]{step }\end{DoxyParamCaption})}
+
+
+
+draws the pallete for indexed mode 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & @þaram no\+\_\+rectangles \\
+\hline
+{\em first} & \\
+\hline
+{\em step} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success, 1 otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{graphics_8c_a3d637ba6438c3c79c0eafe641a2637d4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{graphics_8c_a08c498ffeb0a3962e3b7711b57397741}\label{graphics_8c_a08c498ffeb0a3962e3b7711b57397741}} 
+\index{graphics.c@{graphics.c}!vg\_draw\_pixel@{vg\_draw\_pixel}}
+\index{vg\_draw\_pixel@{vg\_draw\_pixel}!graphics.c@{graphics.c}}
+\doxysubsubsection{\texorpdfstring{vg\_draw\_pixel()}{vg\_draw\_pixel()}}
+{\footnotesize\ttfamily int() vg\+\_\+draw\+\_\+pixel (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y,  }\item[{uint32\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{graphics_8c_a08c498ffeb0a3962e3b7711b57397741_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{graphics_8c_a99d2da2559e11200c6b40c469e9977ec}\label{graphics_8c_a99d2da2559e11200c6b40c469e9977ec}} 
+\index{graphics.c@{graphics.c}!vg\_draw\_rectangle@{vg\_draw\_rectangle}}
+\index{vg\_draw\_rectangle@{vg\_draw\_rectangle}!graphics.c@{graphics.c}}
+\doxysubsubsection{\texorpdfstring{vg\_draw\_rectangle()}{vg\_draw\_rectangle()}}
+{\footnotesize\ttfamily int() vg\+\_\+draw\+\_\+rectangle (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y,  }\item[{uint16\+\_\+t}]{width,  }\item[{uint16\+\_\+t}]{height,  }\item[{uint32\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{graphics_8c_a99d2da2559e11200c6b40c469e9977ec_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=295pt]{graphics_8c_a99d2da2559e11200c6b40c469e9977ec_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{graphics_8c_ab15a07157365105e6e15d0ae87e9cb6d}\label{graphics_8c_ab15a07157365105e6e15d0ae87e9cb6d}} 
+\index{graphics.c@{graphics.c}!video\_set\_graphics@{video\_set\_graphics}}
+\index{video\_set\_graphics@{video\_set\_graphics}!graphics.c@{graphics.c}}
+\doxysubsubsection{\texorpdfstring{video\_set\_graphics()}{video\_set\_graphics()}}
+{\footnotesize\ttfamily int() video\+\_\+set\+\_\+graphics (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+sets the video graphics mode and maps the memory 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if sucess 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{graphics_8c_ab15a07157365105e6e15d0ae87e9cb6d_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{graphics_8c_abd89d1c2107fd85e60b7143c06eb0a24}\label{graphics_8c_abd89d1c2107fd85e60b7143c06eb0a24}} 
+\index{graphics.c@{graphics.c}!bits\_per\_pixel@{bits\_per\_pixel}}
+\index{bits\_per\_pixel@{bits\_per\_pixel}!graphics.c@{graphics.c}}
+\doxysubsubsection{\texorpdfstring{bits\_per\_pixel}{bits\_per\_pixel}}
+{\footnotesize\ttfamily unsigned int bits\+\_\+per\+\_\+pixel\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{graphics_8c_aff2566f4c366b48d73479bef43ee4d2e}\label{graphics_8c_aff2566f4c366b48d73479bef43ee4d2e}} 
+\index{graphics.c@{graphics.c}!buffer@{buffer}}
+\index{buffer@{buffer}!graphics.c@{graphics.c}}
+\doxysubsubsection{\texorpdfstring{buffer}{buffer}}
+{\footnotesize\ttfamily char$\ast$ buffer\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{graphics_8c_a6682c6bd965e44d2880453dd6ea872ce}\label{graphics_8c_a6682c6bd965e44d2880453dd6ea872ce}} 
+\index{graphics.c@{graphics.c}!bytes\_per\_pixel@{bytes\_per\_pixel}}
+\index{bytes\_per\_pixel@{bytes\_per\_pixel}!graphics.c@{graphics.c}}
+\doxysubsubsection{\texorpdfstring{bytes\_per\_pixel}{bytes\_per\_pixel}}
+{\footnotesize\ttfamily unsigned int bytes\+\_\+per\+\_\+pixel\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{graphics_8c_a43e7e5a0a8f9069e6413b2066ca52f3e}\label{graphics_8c_a43e7e5a0a8f9069e6413b2066ca52f3e}} 
+\index{graphics.c@{graphics.c}!h\_res@{h\_res}}
+\index{h\_res@{h\_res}!graphics.c@{graphics.c}}
+\doxysubsubsection{\texorpdfstring{h\_res}{h\_res}}
+{\footnotesize\ttfamily unsigned h\+\_\+res\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{graphics_8c_a0cb3d0ba34458283fd5bfe568bc6b2ac}\label{graphics_8c_a0cb3d0ba34458283fd5bfe568bc6b2ac}} 
+\index{graphics.c@{graphics.c}!info@{info}}
+\index{info@{info}!graphics.c@{graphics.c}}
+\doxysubsubsection{\texorpdfstring{info}{info}}
+{\footnotesize\ttfamily vbe\+\_\+mode\+\_\+info\+\_\+t info}
+
+\mbox{\Hypertarget{graphics_8c_a5bda1b499253a8fbf3cab646f8760391}\label{graphics_8c_a5bda1b499253a8fbf3cab646f8760391}} 
+\index{graphics.c@{graphics.c}!v\_res@{v\_res}}
+\index{v\_res@{v\_res}!graphics.c@{graphics.c}}
+\doxysubsubsection{\texorpdfstring{v\_res}{v\_res}}
+{\footnotesize\ttfamily unsigned v\+\_\+res\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{graphics_8c_a93a24e067b9083bed6fb5c0336fd7a01}\label{graphics_8c_a93a24e067b9083bed6fb5c0336fd7a01}} 
+\index{graphics.c@{graphics.c}!video\_mem@{video\_mem}}
+\index{video\_mem@{video\_mem}!graphics.c@{graphics.c}}
+\doxysubsubsection{\texorpdfstring{video\_mem}{video\_mem}}
+{\footnotesize\ttfamily char$\ast$ video\+\_\+mem\hspace{0.3cm}{\ttfamily [static]}}
+

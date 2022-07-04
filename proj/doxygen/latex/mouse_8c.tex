@@ -1,0 +1,227 @@
+\hypertarget{mouse_8c}{}\doxysection{C\+:/\+Users/\+Rui Andrade/\+Documents/\+MINIX-\/\+LCOM/\+Minix Shared Folder/g04/proj/src/devices/mouse.c File Reference}
+\label{mouse_8c}\index{C:/Users/Rui Andrade/Documents/MINIX-\/LCOM/Minix Shared Folder/g04/proj/src/devices/mouse.c@{C:/Users/Rui Andrade/Documents/MINIX-\/LCOM/Minix Shared Folder/g04/proj/src/devices/mouse.c}}
+{\ttfamily \#include \char`\"{}mouse.\+h\char`\"{}}\newline
+Include dependency graph for mouse.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{mouse_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void() \mbox{\hyperlink{mouse_8c_a210374b50462acdedab00df64d5cea3c}{mouse\+\_\+ih}} ()
+\begin{DoxyCompactList}\small\item\em checks mouse status for errors \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{mouse_8c_a20285aed4b3ef45812cd967532dd09db}{mouse\+\_\+subscribe\+\_\+int}} (uint8\+\_\+t $\ast$bit\+\_\+no)
+\begin{DoxyCompactList}\small\item\em subscribes to mouse interrupts \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{mouse_8c_a3ecf823d80520009ae5e0d76ae40a3c3}{mouse\+\_\+unsubscribe\+\_\+int}} ()
+\begin{DoxyCompactList}\small\item\em unsubscribes to mouse interrupts \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{mouse_8c_ab31070c6f44ecf8a9d07346043596bf6}{mouse\+\_\+set\+\_\+packet}} (struct packet $\ast$pacote)
+\begin{DoxyCompactList}\small\item\em reads and updates the packets \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{mouse_8c_a556859d2c63ddd3236d64d2fc0e01e4c}{check\+\_\+ibf\+\_\+full}} ()
+\begin{DoxyCompactList}\small\item\em checks mouse status to see if its input buffer is full \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{mouse_8c_aa6e236ffc26937f908fb1298b4abf031}{send\+\_\+mouse\+\_\+cmd}} (uint8\+\_\+t cmd)
+\begin{DoxyCompactList}\small\item\em checks for errors and sends the mouse\textquotesingle{}s command \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{mouse_8c_a7e311379d4d64f88873ef8ade5c82a25}{mouse\+\_\+disable\+\_\+data\+\_\+reporting}} ()
+\begin{DoxyCompactList}\small\item\em disables mouse\textquotesingle{}s data reporting \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{mouse_8c_ad32d9efd235ecb6137cbbc63238d921b}{hook\+\_\+id\+\_\+m}} = 6
+\item 
+int \mbox{\hyperlink{mouse_8c_aaba2f829de3d01729943a0ac16e0c27e}{flag\+\_\+m}} = 0
+\item 
+uint8\+\_\+t \mbox{\hyperlink{mouse_8c_a96f44d20f1dbf1c8785a7bc99a46164c}{byte}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{mouse_8c_aa1de7a5557e9d96b83cf03f73c92163f}{scancode}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{mouse_8c_a556859d2c63ddd3236d64d2fc0e01e4c}\label{mouse_8c_a556859d2c63ddd3236d64d2fc0e01e4c}} 
+\index{mouse.c@{mouse.c}!check\_ibf\_full@{check\_ibf\_full}}
+\index{check\_ibf\_full@{check\_ibf\_full}!mouse.c@{mouse.c}}
+\doxysubsubsection{\texorpdfstring{check\_ibf\_full()}{check\_ibf\_full()}}
+{\footnotesize\ttfamily int() check\+\_\+ibf\+\_\+full (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+checks mouse status to see if its input buffer is full 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{mouse_8c_a556859d2c63ddd3236d64d2fc0e01e4c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_8c_a556859d2c63ddd3236d64d2fc0e01e4c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{mouse_8c_a7e311379d4d64f88873ef8ade5c82a25}\label{mouse_8c_a7e311379d4d64f88873ef8ade5c82a25}} 
+\index{mouse.c@{mouse.c}!mouse\_disable\_data\_reporting@{mouse\_disable\_data\_reporting}}
+\index{mouse\_disable\_data\_reporting@{mouse\_disable\_data\_reporting}!mouse.c@{mouse.c}}
+\doxysubsubsection{\texorpdfstring{mouse\_disable\_data\_reporting()}{mouse\_disable\_data\_reporting()}}
+{\footnotesize\ttfamily int() mouse\+\_\+disable\+\_\+data\+\_\+reporting (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+disables mouse\textquotesingle{}s data reporting 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_8c_a7e311379d4d64f88873ef8ade5c82a25_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{mouse_8c_a7e311379d4d64f88873ef8ade5c82a25_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{mouse_8c_a210374b50462acdedab00df64d5cea3c}\label{mouse_8c_a210374b50462acdedab00df64d5cea3c}} 
+\index{mouse.c@{mouse.c}!mouse\_ih@{mouse\_ih}}
+\index{mouse\_ih@{mouse\_ih}!mouse.c@{mouse.c}}
+\doxysubsubsection{\texorpdfstring{mouse\_ih()}{mouse\_ih()}}
+{\footnotesize\ttfamily void() mouse\+\_\+ih (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+checks mouse status for errors 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{mouse_8c_a210374b50462acdedab00df64d5cea3c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_8c_a210374b50462acdedab00df64d5cea3c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{mouse_8c_ab31070c6f44ecf8a9d07346043596bf6}\label{mouse_8c_ab31070c6f44ecf8a9d07346043596bf6}} 
+\index{mouse.c@{mouse.c}!mouse\_set\_packet@{mouse\_set\_packet}}
+\index{mouse\_set\_packet@{mouse\_set\_packet}!mouse.c@{mouse.c}}
+\doxysubsubsection{\texorpdfstring{mouse\_set\_packet()}{mouse\_set\_packet()}}
+{\footnotesize\ttfamily void() mouse\+\_\+set\+\_\+packet (\begin{DoxyParamCaption}\item[{struct packet $\ast$}]{pacote }\end{DoxyParamCaption})}
+
+
+
+reads and updates the packets 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_8c_ab31070c6f44ecf8a9d07346043596bf6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{mouse_8c_a20285aed4b3ef45812cd967532dd09db}\label{mouse_8c_a20285aed4b3ef45812cd967532dd09db}} 
+\index{mouse.c@{mouse.c}!mouse\_subscribe\_int@{mouse\_subscribe\_int}}
+\index{mouse\_subscribe\_int@{mouse\_subscribe\_int}!mouse.c@{mouse.c}}
+\doxysubsubsection{\texorpdfstring{mouse\_subscribe\_int()}{mouse\_subscribe\_int()}}
+{\footnotesize\ttfamily int() mouse\+\_\+subscribe\+\_\+int (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{bit\+\_\+no }\end{DoxyParamCaption})}
+
+
+
+subscribes to mouse interrupts 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=307pt]{mouse_8c_a20285aed4b3ef45812cd967532dd09db_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{mouse_8c_a3ecf823d80520009ae5e0d76ae40a3c3}\label{mouse_8c_a3ecf823d80520009ae5e0d76ae40a3c3}} 
+\index{mouse.c@{mouse.c}!mouse\_unsubscribe\_int@{mouse\_unsubscribe\_int}}
+\index{mouse\_unsubscribe\_int@{mouse\_unsubscribe\_int}!mouse.c@{mouse.c}}
+\doxysubsubsection{\texorpdfstring{mouse\_unsubscribe\_int()}{mouse\_unsubscribe\_int()}}
+{\footnotesize\ttfamily int() mouse\+\_\+unsubscribe\+\_\+int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+unsubscribes to mouse interrupts 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=317pt]{mouse_8c_a3ecf823d80520009ae5e0d76ae40a3c3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{mouse_8c_aa6e236ffc26937f908fb1298b4abf031}\label{mouse_8c_aa6e236ffc26937f908fb1298b4abf031}} 
+\index{mouse.c@{mouse.c}!send\_mouse\_cmd@{send\_mouse\_cmd}}
+\index{send\_mouse\_cmd@{send\_mouse\_cmd}!mouse.c@{mouse.c}}
+\doxysubsubsection{\texorpdfstring{send\_mouse\_cmd()}{send\_mouse\_cmd()}}
+{\footnotesize\ttfamily int() send\+\_\+mouse\+\_\+cmd (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{cmd }\end{DoxyParamCaption})}
+
+
+
+checks for errors and sends the mouse\textquotesingle{}s command 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_8c_aa6e236ffc26937f908fb1298b4abf031_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_8c_aa6e236ffc26937f908fb1298b4abf031_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{mouse_8c_a96f44d20f1dbf1c8785a7bc99a46164c}\label{mouse_8c_a96f44d20f1dbf1c8785a7bc99a46164c}} 
+\index{mouse.c@{mouse.c}!byte@{byte}}
+\index{byte@{byte}!mouse.c@{mouse.c}}
+\doxysubsubsection{\texorpdfstring{byte}{byte}}
+{\footnotesize\ttfamily uint8\+\_\+t byte}
+
+\mbox{\Hypertarget{mouse_8c_aaba2f829de3d01729943a0ac16e0c27e}\label{mouse_8c_aaba2f829de3d01729943a0ac16e0c27e}} 
+\index{mouse.c@{mouse.c}!flag\_m@{flag\_m}}
+\index{flag\_m@{flag\_m}!mouse.c@{mouse.c}}
+\doxysubsubsection{\texorpdfstring{flag\_m}{flag\_m}}
+{\footnotesize\ttfamily int flag\+\_\+m = 0}
+
+\mbox{\Hypertarget{mouse_8c_ad32d9efd235ecb6137cbbc63238d921b}\label{mouse_8c_ad32d9efd235ecb6137cbbc63238d921b}} 
+\index{mouse.c@{mouse.c}!hook\_id\_m@{hook\_id\_m}}
+\index{hook\_id\_m@{hook\_id\_m}!mouse.c@{mouse.c}}
+\doxysubsubsection{\texorpdfstring{hook\_id\_m}{hook\_id\_m}}
+{\footnotesize\ttfamily int hook\+\_\+id\+\_\+m = 6}
+
+\mbox{\Hypertarget{mouse_8c_aa1de7a5557e9d96b83cf03f73c92163f}\label{mouse_8c_aa1de7a5557e9d96b83cf03f73c92163f}} 
+\index{mouse.c@{mouse.c}!scancode@{scancode}}
+\index{scancode@{scancode}!mouse.c@{mouse.c}}
+\doxysubsubsection{\texorpdfstring{scancode}{scancode}}
+{\footnotesize\ttfamily uint8\+\_\+t scancode}
+

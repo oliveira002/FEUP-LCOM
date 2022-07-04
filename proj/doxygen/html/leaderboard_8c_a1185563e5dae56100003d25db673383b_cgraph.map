@@ -1,0 +1,7 @@
+<map id="drawDefBoard" name="drawDefBoard">
+<area shape="rect" id="node1" title="draws background of leaderboard" alt="" coords="5,31,108,57"/>
+<area shape="rect" id="node2" href="$graphics_8c.html#a496843f365959ef8c821e47493dc6be7" title="Draws the XPM on the screen." alt="" coords="293,5,398,32"/>
+<area shape="rect" id="node4" href="$leaderboard_8c.html#a435ba4a0d4fc47fbf7b4e13acaa312e4" title="draws leaderboard" alt="" coords="156,56,239,83"/>
+<area shape="rect" id="node3" href="$graphics_8c.html#a08c498ffeb0a3962e3b7711b57397741" title=" " alt="" coords="452,31,555,57"/>
+<area shape="rect" id="node5" href="$graphics_8c.html#a3111ea21013ad9656c7795b4d491b984" title="Draws a letter/number from the XPM of the font used." alt="" coords="287,56,404,83"/>
+</map>

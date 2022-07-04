@@ -1,0 +1,673 @@
+\hypertarget{snake_8h}{}\doxysection{C\+:/\+Users/\+Rui Andrade/\+Documents/\+MINIX-\/\+LCOM/\+Minix Shared Folder/g04/proj/src/snake.h File Reference}
+\label{snake_8h}\index{C:/Users/Rui Andrade/Documents/MINIX-\/LCOM/Minix Shared Folder/g04/proj/src/snake.h@{C:/Users/Rui Andrade/Documents/MINIX-\/LCOM/Minix Shared Folder/g04/proj/src/snake.h}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}devices/graphics.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xpms/up.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xpms/left.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xpms/brick.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xpms/font\+S.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xpms/broken.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xpms/down.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xpms/right.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xpms/wall.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xpms/bg\+Game.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xpms/fruit.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xpms/body\+Snake.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}kbc\+Keys.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}leaderboard.\+h\char`\"{}}\newline
+Include dependency graph for snake.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_object__t}{Object\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Struct used to represent an object Struct\+: Object. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_snake__t}{Snake\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Struct used to represent a snake Struct\+: Snake\+Body. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{snake_8h_ae52b0f5d76464c6ec0a5534b63298e4f}{PIXELOFFSET}}~48
+\item 
+\#define \mbox{\hyperlink{snake_8h_aa0be092689b791aa1efd338f7322bb38}{SNAKEMAXSIZE}}~864
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct_object__t}{Object\+\_\+t}} \mbox{\hyperlink{snake_8h_aee6fe5e4f0040f46c849d2bd3ac3ceca}{Object}}
+\begin{DoxyCompactList}\small\item\em Struct used to represent an object Struct\+: Object. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{struct_snake__t}{Snake\+\_\+t}} \mbox{\hyperlink{snake_8h_a0791245f0bc890530f6366f1f0e9de9d}{Snake\+Body}}
+\begin{DoxyCompactList}\small\item\em Struct used to represent a snake Struct\+: Snake\+Body. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{snake_8h_a2de8c9bbfd128df445674f33159f1abf}{Snake\+Body\+Type}} \{ \mbox{\hyperlink{snake_8h_a2de8c9bbfd128df445674f33159f1abfa0b0955668575b21eb0ab2272aef49f76}{HEAD}}
+, \mbox{\hyperlink{snake_8h_a2de8c9bbfd128df445674f33159f1abfa40adb6a513bd35c0dfff0291e9fdaa63}{BODY}}
+, \mbox{\hyperlink{snake_8h_a2de8c9bbfd128df445674f33159f1abfa4c28487b052a2b05f3db4dc5a722b1d7}{TAIL}}
+, \mbox{\hyperlink{snake_8h_a2de8c9bbfd128df445674f33159f1abfa0b8b1c61f47cbfec80874fa75b86ea0f}{NULLBODY}}
+ \}
+\begin{DoxyCompactList}\small\item\em Struct used to distinguish the type of the snake. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{snake_8h_a842c5e2e69277690b064bf363c017980}{Object\+Type}} \{ \mbox{\hyperlink{snake_8h_a842c5e2e69277690b064bf363c017980a61dca5db46c7857556e7eaced30c879b}{FRUIT}}
+, \mbox{\hyperlink{snake_8h_a842c5e2e69277690b064bf363c017980a02fc27068fe9a3c151ffcc08ec5bb65d}{BLOCK}}
+, \mbox{\hyperlink{snake_8h_a842c5e2e69277690b064bf363c017980aeb30bf699a39ea2cb5819381461ee54d}{BROKEN}}
+ \}
+\begin{DoxyCompactList}\small\item\em Struct used to distinguish the type of the objects in the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{snake_8h_a47ef13939f66d01657db71355518bf95}{Interrupt\+Handler\+Timer}} ()
+\begin{DoxyCompactList}\small\item\em Function to handle timer interrupts when the game\+State is PLAY\+\_\+\+SOLO, is also responsible for printing all the objects. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{snake_8h_afcdde9b4c6f02cd996f37a059d6d1235}{Menu\+Starter}} ()
+\begin{DoxyCompactList}\small\item\em Function responsible for initiating all the variables of the game, and also resetting them coming back from the Pause Menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{snake_8h_a37a1a64726df563c1615e713289a30bd}{spawn\+Fruits}} ()
+\begin{DoxyCompactList}\small\item\em Function responsible for randomly spawning fruits within the map borders, also checks for possible collisions (spawn on top of the snake for example) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{snake_8h_a4f4cdc5a6b882a5f3d7776e40a2fa505}{draw\+Snake}} ()
+\begin{DoxyCompactList}\small\item\em Function responsible for drawing the snake, taking in account the direction it is going. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{snake_8h_a792623332c8199451999b1d06c4b2e16}{move\+Snake}} ()
+\begin{DoxyCompactList}\small\item\em Function responsible for not only moving the snake head but also for moving its tail. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{snake_8h_a8801961ce0ec8ab368c8cfe262f2b429}{Interrupt\+Handler\+KBC}} (enum \mbox{\hyperlink{kbc_keys_8h_a6ae70ce7b1b294c469f11cbabb8f30d6}{KEY}} k)
+\begin{DoxyCompactList}\small\item\em Function to handle keyboard interrupts when the game\+State is PLAY\+\_\+\+SOLO, update the snake direction \& check for ESC KEY(pause) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{snake_8h_af5808b10d2bfc050eb76e8d07055f46e}{draw\+Objects}} ()
+\begin{DoxyCompactList}\small\item\em Function responsible for drawing all the objects of the game and also the mouse. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{snake_8h_a01311dd183a0158bb4da61b69ac2fb0a}{draw\+BG}} ()
+\begin{DoxyCompactList}\small\item\em Function responsible for drawing the background of the game. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{snake_8h_a8ebc9c9154b6c78948850b34b555d1e7}{Check\+Colisions}} ()
+\begin{DoxyCompactList}\small\item\em Function responsible for checking possible collisions of the snake. Checks for the border,fruits \& blocks. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{snake_8h_a1439c359b287c19809ed0f5e128d57bb}{update\+Mov}} ()
+\begin{DoxyCompactList}\small\item\em Function responsible for update the movement of the snake, and also forbids the snake from going in the opposed direction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{snake_8h_a175191134328c8902595d554281ddb19}{clean\+All\+BG}} ()
+\begin{DoxyCompactList}\small\item\em Function responsible for cleaning the pixels that changed from the initial background. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{snake_8h_a25dc2ca4d9df92524e8563f3f67d6d28}{Interrupt\+Handler\+Mouse}} ()
+\begin{DoxyCompactList}\small\item\em Function to handle mouse interrupts when the game\+State is PLAY\+\_\+\+SOLO. Takes care of the left click and right click functionality. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{snake_8h_a9445ad680de846efddde3d4a52110377}{check\+Fruit}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Function to check if there is a fruit in the specified position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{snake_8h_aff2507557a8a3f3404211ab3f215cace}{init\+Block}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Function responsible for creating a block in the specified position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{snake_8h_a375107b888bb3c4258b6178824958287}{start\+Blocks}} ()
+\begin{DoxyCompactList}\small\item\em Function responsible for spawning all the blocks. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{snake_8h_a51eb06e541b597eb5a28986220b5619c}{find\+Idx\+Block}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Function responsible for returning the idx of the specified block in its array. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{snake_8h_a23bc8b5691d42ef613230b1f636b413c}{Game\+Over\+Leader\+Board}} ()
+\begin{DoxyCompactList}\small\item\em Updates the game\+State to DEAD, and writes on the leaderboard the score. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{snake_8h_af895200eed6c62b16871ef2d233a3489}{draw\+Score}} ()
+\begin{DoxyCompactList}\small\item\em Function responsible for drawing the current score of the user on the screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{snake_8h_ae52b0f5d76464c6ec0a5534b63298e4f}\label{snake_8h_ae52b0f5d76464c6ec0a5534b63298e4f}} 
+\index{snake.h@{snake.h}!PIXELOFFSET@{PIXELOFFSET}}
+\index{PIXELOFFSET@{PIXELOFFSET}!snake.h@{snake.h}}
+\doxysubsubsection{\texorpdfstring{PIXELOFFSET}{PIXELOFFSET}}
+{\footnotesize\ttfamily \#define PIXELOFFSET~48}
+
+\mbox{\Hypertarget{snake_8h_aa0be092689b791aa1efd338f7322bb38}\label{snake_8h_aa0be092689b791aa1efd338f7322bb38}} 
+\index{snake.h@{snake.h}!SNAKEMAXSIZE@{SNAKEMAXSIZE}}
+\index{SNAKEMAXSIZE@{SNAKEMAXSIZE}!snake.h@{snake.h}}
+\doxysubsubsection{\texorpdfstring{SNAKEMAXSIZE}{SNAKEMAXSIZE}}
+{\footnotesize\ttfamily \#define SNAKEMAXSIZE~864}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{snake_8h_aee6fe5e4f0040f46c849d2bd3ac3ceca}\label{snake_8h_aee6fe5e4f0040f46c849d2bd3ac3ceca}} 
+\index{snake.h@{snake.h}!Object@{Object}}
+\index{Object@{Object}!snake.h@{snake.h}}
+\doxysubsubsection{\texorpdfstring{Object}{Object}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_object__t}{Object\+\_\+t}} \mbox{\hyperlink{snake_8h_aee6fe5e4f0040f46c849d2bd3ac3ceca}{Object}}}
+
+
+
+Struct used to represent an object Struct\+: Object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em type} & \\
+\hline
+{\em active} & to know whether or not the object is in play \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{snake_8h_a0791245f0bc890530f6366f1f0e9de9d}\label{snake_8h_a0791245f0bc890530f6366f1f0e9de9d}} 
+\index{snake.h@{snake.h}!SnakeBody@{SnakeBody}}
+\index{SnakeBody@{SnakeBody}!snake.h@{snake.h}}
+\doxysubsubsection{\texorpdfstring{SnakeBody}{SnakeBody}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_snake__t}{Snake\+\_\+t}} \mbox{\hyperlink{snake_8h_a0791245f0bc890530f6366f1f0e9de9d}{Snake\+Body}}}
+
+
+
+Struct used to represent a snake Struct\+: Snake\+Body. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em body\+Size} & \\
+\hline
+{\em bodyX} & array used to store the Snake\textquotesingle{}s tail X coordinate \\
+\hline
+{\em bodyY} & array used to store the Snake\textquotesingle{}s tail Y coordinate \\
+\hline
+{\em body\+Type} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{snake_8h_a842c5e2e69277690b064bf363c017980}\label{snake_8h_a842c5e2e69277690b064bf363c017980}} 
+\index{snake.h@{snake.h}!ObjectType@{ObjectType}}
+\index{ObjectType@{ObjectType}!snake.h@{snake.h}}
+\doxysubsubsection{\texorpdfstring{ObjectType}{ObjectType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{snake_8h_a842c5e2e69277690b064bf363c017980}{Object\+Type}}}
+
+
+
+Struct used to distinguish the type of the objects in the game. 
+
+Enum\+: Object\+Type \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FRUIT@{FRUIT}!snake.h@{snake.h}}\index{snake.h@{snake.h}!FRUIT@{FRUIT}}}\mbox{\Hypertarget{snake_8h_a842c5e2e69277690b064bf363c017980a61dca5db46c7857556e7eaced30c879b}\label{snake_8h_a842c5e2e69277690b064bf363c017980a61dca5db46c7857556e7eaced30c879b}} 
+FRUIT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BLOCK@{BLOCK}!snake.h@{snake.h}}\index{snake.h@{snake.h}!BLOCK@{BLOCK}}}\mbox{\Hypertarget{snake_8h_a842c5e2e69277690b064bf363c017980a02fc27068fe9a3c151ffcc08ec5bb65d}\label{snake_8h_a842c5e2e69277690b064bf363c017980a02fc27068fe9a3c151ffcc08ec5bb65d}} 
+BLOCK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BROKEN@{BROKEN}!snake.h@{snake.h}}\index{snake.h@{snake.h}!BROKEN@{BROKEN}}}\mbox{\Hypertarget{snake_8h_a842c5e2e69277690b064bf363c017980aeb30bf699a39ea2cb5819381461ee54d}\label{snake_8h_a842c5e2e69277690b064bf363c017980aeb30bf699a39ea2cb5819381461ee54d}} 
+BROKEN&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{snake_8h_a2de8c9bbfd128df445674f33159f1abf}\label{snake_8h_a2de8c9bbfd128df445674f33159f1abf}} 
+\index{snake.h@{snake.h}!SnakeBodyType@{SnakeBodyType}}
+\index{SnakeBodyType@{SnakeBodyType}!snake.h@{snake.h}}
+\doxysubsubsection{\texorpdfstring{SnakeBodyType}{SnakeBodyType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{snake_8h_a2de8c9bbfd128df445674f33159f1abf}{Snake\+Body\+Type}}}
+
+
+
+Struct used to distinguish the type of the snake. 
+
+Enum\+: Snake\+Body\+Type \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HEAD@{HEAD}!snake.h@{snake.h}}\index{snake.h@{snake.h}!HEAD@{HEAD}}}\mbox{\Hypertarget{snake_8h_a2de8c9bbfd128df445674f33159f1abfa0b0955668575b21eb0ab2272aef49f76}\label{snake_8h_a2de8c9bbfd128df445674f33159f1abfa0b0955668575b21eb0ab2272aef49f76}} 
+HEAD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BODY@{BODY}!snake.h@{snake.h}}\index{snake.h@{snake.h}!BODY@{BODY}}}\mbox{\Hypertarget{snake_8h_a2de8c9bbfd128df445674f33159f1abfa40adb6a513bd35c0dfff0291e9fdaa63}\label{snake_8h_a2de8c9bbfd128df445674f33159f1abfa40adb6a513bd35c0dfff0291e9fdaa63}} 
+BODY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TAIL@{TAIL}!snake.h@{snake.h}}\index{snake.h@{snake.h}!TAIL@{TAIL}}}\mbox{\Hypertarget{snake_8h_a2de8c9bbfd128df445674f33159f1abfa4c28487b052a2b05f3db4dc5a722b1d7}\label{snake_8h_a2de8c9bbfd128df445674f33159f1abfa4c28487b052a2b05f3db4dc5a722b1d7}} 
+TAIL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NULLBODY@{NULLBODY}!snake.h@{snake.h}}\index{snake.h@{snake.h}!NULLBODY@{NULLBODY}}}\mbox{\Hypertarget{snake_8h_a2de8c9bbfd128df445674f33159f1abfa0b8b1c61f47cbfec80874fa75b86ea0f}\label{snake_8h_a2de8c9bbfd128df445674f33159f1abfa0b8b1c61f47cbfec80874fa75b86ea0f}} 
+NULLBODY&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{snake_8h_a8ebc9c9154b6c78948850b34b555d1e7}\label{snake_8h_a8ebc9c9154b6c78948850b34b555d1e7}} 
+\index{snake.h@{snake.h}!CheckColisions@{CheckColisions}}
+\index{CheckColisions@{CheckColisions}!snake.h@{snake.h}}
+\doxysubsubsection{\texorpdfstring{CheckColisions()}{CheckColisions()}}
+{\footnotesize\ttfamily int Check\+Colisions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function responsible for checking possible collisions of the snake. Checks for the border,fruits \& blocks. 
+
+\begin{DoxyReturn}{Returns}
+0 if success, 1 otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8h_a8ebc9c9154b6c78948850b34b555d1e7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8h_a8ebc9c9154b6c78948850b34b555d1e7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{snake_8h_a9445ad680de846efddde3d4a52110377}\label{snake_8h_a9445ad680de846efddde3d4a52110377}} 
+\index{snake.h@{snake.h}!checkFruit@{checkFruit}}
+\index{checkFruit@{checkFruit}!snake.h@{snake.h}}
+\doxysubsubsection{\texorpdfstring{checkFruit()}{checkFruit()}}
+{\footnotesize\ttfamily bool check\+Fruit (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Function to check if there is a fruit in the specified position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if there is a fruit, false otherwise 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8h_a9445ad680de846efddde3d4a52110377_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{snake_8h_a175191134328c8902595d554281ddb19}\label{snake_8h_a175191134328c8902595d554281ddb19}} 
+\index{snake.h@{snake.h}!cleanAllBG@{cleanAllBG}}
+\index{cleanAllBG@{cleanAllBG}!snake.h@{snake.h}}
+\doxysubsubsection{\texorpdfstring{cleanAllBG()}{cleanAllBG()}}
+{\footnotesize\ttfamily void clean\+All\+BG (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function responsible for cleaning the pixels that changed from the initial background. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{snake_8h_a175191134328c8902595d554281ddb19_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8h_a175191134328c8902595d554281ddb19_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{snake_8h_a01311dd183a0158bb4da61b69ac2fb0a}\label{snake_8h_a01311dd183a0158bb4da61b69ac2fb0a}} 
+\index{snake.h@{snake.h}!drawBG@{drawBG}}
+\index{drawBG@{drawBG}!snake.h@{snake.h}}
+\doxysubsubsection{\texorpdfstring{drawBG()}{drawBG()}}
+{\footnotesize\ttfamily void draw\+BG (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function responsible for drawing the background of the game. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8h_a01311dd183a0158bb4da61b69ac2fb0a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=347pt]{snake_8h_a01311dd183a0158bb4da61b69ac2fb0a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{snake_8h_af5808b10d2bfc050eb76e8d07055f46e}\label{snake_8h_af5808b10d2bfc050eb76e8d07055f46e}} 
+\index{snake.h@{snake.h}!drawObjects@{drawObjects}}
+\index{drawObjects@{drawObjects}!snake.h@{snake.h}}
+\doxysubsubsection{\texorpdfstring{drawObjects()}{drawObjects()}}
+{\footnotesize\ttfamily void draw\+Objects (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function responsible for drawing all the objects of the game and also the mouse. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8h_af5808b10d2bfc050eb76e8d07055f46e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8h_af5808b10d2bfc050eb76e8d07055f46e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{snake_8h_af895200eed6c62b16871ef2d233a3489}\label{snake_8h_af895200eed6c62b16871ef2d233a3489}} 
+\index{snake.h@{snake.h}!drawScore@{drawScore}}
+\index{drawScore@{drawScore}!snake.h@{snake.h}}
+\doxysubsubsection{\texorpdfstring{drawScore()}{drawScore()}}
+{\footnotesize\ttfamily void draw\+Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function responsible for drawing the current score of the user on the screen. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8h_af895200eed6c62b16871ef2d233a3489_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8h_af895200eed6c62b16871ef2d233a3489_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{snake_8h_a4f4cdc5a6b882a5f3d7776e40a2fa505}\label{snake_8h_a4f4cdc5a6b882a5f3d7776e40a2fa505}} 
+\index{snake.h@{snake.h}!drawSnake@{drawSnake}}
+\index{drawSnake@{drawSnake}!snake.h@{snake.h}}
+\doxysubsubsection{\texorpdfstring{drawSnake()}{drawSnake()}}
+{\footnotesize\ttfamily void draw\+Snake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function responsible for drawing the snake, taking in account the direction it is going. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8h_a4f4cdc5a6b882a5f3d7776e40a2fa505_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8h_a4f4cdc5a6b882a5f3d7776e40a2fa505_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{snake_8h_a51eb06e541b597eb5a28986220b5619c}\label{snake_8h_a51eb06e541b597eb5a28986220b5619c}} 
+\index{snake.h@{snake.h}!findIdxBlock@{findIdxBlock}}
+\index{findIdxBlock@{findIdxBlock}!snake.h@{snake.h}}
+\doxysubsubsection{\texorpdfstring{findIdxBlock()}{findIdxBlock()}}
+{\footnotesize\ttfamily int find\+Idx\+Block (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Function responsible for returning the idx of the specified block in its array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the index, -\/1 otherwise 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8h_a51eb06e541b597eb5a28986220b5619c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{snake_8h_a23bc8b5691d42ef613230b1f636b413c}\label{snake_8h_a23bc8b5691d42ef613230b1f636b413c}} 
+\index{snake.h@{snake.h}!GameOverLeaderBoard@{GameOverLeaderBoard}}
+\index{GameOverLeaderBoard@{GameOverLeaderBoard}!snake.h@{snake.h}}
+\doxysubsubsection{\texorpdfstring{GameOverLeaderBoard()}{GameOverLeaderBoard()}}
+{\footnotesize\ttfamily int Game\+Over\+Leader\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Updates the game\+State to DEAD, and writes on the leaderboard the score. 
+
+\begin{DoxyReturn}{Returns}
+0 if sucess, -\/1 otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{snake_8h_a23bc8b5691d42ef613230b1f636b413c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8h_a23bc8b5691d42ef613230b1f636b413c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{snake_8h_aff2507557a8a3f3404211ab3f215cace}\label{snake_8h_aff2507557a8a3f3404211ab3f215cace}} 
+\index{snake.h@{snake.h}!initBlock@{initBlock}}
+\index{initBlock@{initBlock}!snake.h@{snake.h}}
+\doxysubsubsection{\texorpdfstring{initBlock()}{initBlock()}}
+{\footnotesize\ttfamily void init\+Block (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Function responsible for creating a block in the specified position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8h_aff2507557a8a3f3404211ab3f215cace_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{snake_8h_a8801961ce0ec8ab368c8cfe262f2b429}\label{snake_8h_a8801961ce0ec8ab368c8cfe262f2b429}} 
+\index{snake.h@{snake.h}!InterruptHandlerKBC@{InterruptHandlerKBC}}
+\index{InterruptHandlerKBC@{InterruptHandlerKBC}!snake.h@{snake.h}}
+\doxysubsubsection{\texorpdfstring{InterruptHandlerKBC()}{InterruptHandlerKBC()}}
+{\footnotesize\ttfamily void Interrupt\+Handler\+KBC (\begin{DoxyParamCaption}\item[{enum \mbox{\hyperlink{kbc_keys_8h_a6ae70ce7b1b294c469f11cbabb8f30d6}{KEY}}}]{k }\end{DoxyParamCaption})}
+
+
+
+Function to handle keyboard interrupts when the game\+State is PLAY\+\_\+\+SOLO, update the snake direction \& check for ESC KEY(pause) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & (key the user pressed in the keyboard) \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8h_a8801961ce0ec8ab368c8cfe262f2b429_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{snake_8h_a25dc2ca4d9df92524e8563f3f67d6d28}\label{snake_8h_a25dc2ca4d9df92524e8563f3f67d6d28}} 
+\index{snake.h@{snake.h}!InterruptHandlerMouse@{InterruptHandlerMouse}}
+\index{InterruptHandlerMouse@{InterruptHandlerMouse}!snake.h@{snake.h}}
+\doxysubsubsection{\texorpdfstring{InterruptHandlerMouse()}{InterruptHandlerMouse()}}
+{\footnotesize\ttfamily void Interrupt\+Handler\+Mouse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function to handle mouse interrupts when the game\+State is PLAY\+\_\+\+SOLO. Takes care of the left click and right click functionality. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8h_a25dc2ca4d9df92524e8563f3f67d6d28_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8h_a25dc2ca4d9df92524e8563f3f67d6d28_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{snake_8h_a47ef13939f66d01657db71355518bf95}\label{snake_8h_a47ef13939f66d01657db71355518bf95}} 
+\index{snake.h@{snake.h}!InterruptHandlerTimer@{InterruptHandlerTimer}}
+\index{InterruptHandlerTimer@{InterruptHandlerTimer}!snake.h@{snake.h}}
+\doxysubsubsection{\texorpdfstring{InterruptHandlerTimer()}{InterruptHandlerTimer()}}
+{\footnotesize\ttfamily void Interrupt\+Handler\+Timer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function to handle timer interrupts when the game\+State is PLAY\+\_\+\+SOLO, is also responsible for printing all the objects. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8h_a47ef13939f66d01657db71355518bf95_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8h_a47ef13939f66d01657db71355518bf95_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{snake_8h_afcdde9b4c6f02cd996f37a059d6d1235}\label{snake_8h_afcdde9b4c6f02cd996f37a059d6d1235}} 
+\index{snake.h@{snake.h}!MenuStarter@{MenuStarter}}
+\index{MenuStarter@{MenuStarter}!snake.h@{snake.h}}
+\doxysubsubsection{\texorpdfstring{MenuStarter()}{MenuStarter()}}
+{\footnotesize\ttfamily void Menu\+Starter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function responsible for initiating all the variables of the game, and also resetting them coming back from the Pause Menu. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8h_afcdde9b4c6f02cd996f37a059d6d1235_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{snake_8h_a792623332c8199451999b1d06c4b2e16}\label{snake_8h_a792623332c8199451999b1d06c4b2e16}} 
+\index{snake.h@{snake.h}!moveSnake@{moveSnake}}
+\index{moveSnake@{moveSnake}!snake.h@{snake.h}}
+\doxysubsubsection{\texorpdfstring{moveSnake()}{moveSnake()}}
+{\footnotesize\ttfamily void move\+Snake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function responsible for not only moving the snake head but also for moving its tail. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8h_a792623332c8199451999b1d06c4b2e16_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{snake_8h_a37a1a64726df563c1615e713289a30bd}\label{snake_8h_a37a1a64726df563c1615e713289a30bd}} 
+\index{snake.h@{snake.h}!spawnFruits@{spawnFruits}}
+\index{spawnFruits@{spawnFruits}!snake.h@{snake.h}}
+\doxysubsubsection{\texorpdfstring{spawnFruits()}{spawnFruits()}}
+{\footnotesize\ttfamily void spawn\+Fruits (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function responsible for randomly spawning fruits within the map borders, also checks for possible collisions (spawn on top of the snake for example) 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8h_a37a1a64726df563c1615e713289a30bd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{snake_8h_a375107b888bb3c4258b6178824958287}\label{snake_8h_a375107b888bb3c4258b6178824958287}} 
+\index{snake.h@{snake.h}!startBlocks@{startBlocks}}
+\index{startBlocks@{startBlocks}!snake.h@{snake.h}}
+\doxysubsubsection{\texorpdfstring{startBlocks()}{startBlocks()}}
+{\footnotesize\ttfamily void start\+Blocks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function responsible for spawning all the blocks. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{snake_8h_a375107b888bb3c4258b6178824958287_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8h_a375107b888bb3c4258b6178824958287_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{snake_8h_a1439c359b287c19809ed0f5e128d57bb}\label{snake_8h_a1439c359b287c19809ed0f5e128d57bb}} 
+\index{snake.h@{snake.h}!updateMov@{updateMov}}
+\index{updateMov@{updateMov}!snake.h@{snake.h}}
+\doxysubsubsection{\texorpdfstring{updateMov()}{updateMov()}}
+{\footnotesize\ttfamily void update\+Mov (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function responsible for update the movement of the snake, and also forbids the snake from going in the opposed direction. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8h_a1439c359b287c19809ed0f5e128d57bb_icgraph}
+\end{center}
+\end{figure}

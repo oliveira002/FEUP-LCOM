@@ -1,0 +1,14 @@
+<map id="cleanBG" name="cleanBG">
+<area shape="rect" id="node1" title="Clears the XPM on the screen by paiting the background." alt="" coords="935,75,1007,101"/>
+<area shape="rect" id="node2" href="$snake_8c.html#a175191134328c8902595d554281ddb19" title="Function responsible for cleaning the pixels that changed from the initial background." alt="" coords="791,100,878,127"/>
+<area shape="rect" id="node8" href="$menu_8c.html#a0921c0ead7a0407b4bb3ab368b790efb" title="erases the text and cursor from the menu" alt="" coords="783,151,887,177"/>
+<area shape="rect" id="node11" href="$snake_8c.html#af895200eed6c62b16871ef2d233a3489" title="Function responsible for drawing the current score of the user on the screen." alt="" coords="793,49,876,76"/>
+<area shape="rect" id="node12" href="$snake_8c.html#a25dc2ca4d9df92524e8563f3f67d6d28" title="Function to handle mouse interrupts when the gameState is PLAY_SOLO. Takes care of the left click and..." alt="" coords="583,5,735,32"/>
+<area shape="rect" id="node3" href="$snake_8c.html#a47ef13939f66d01657db71355518bf95" title="Function to handle timer interrupts when the gameState is PLAY_SOLO, is also responsible for printing..." alt="" coords="586,63,731,89"/>
+<area shape="rect" id="node4" href="$game_8c.html#a44e858f7686dc3323d269fe1b22b3d80" title=" " alt="" coords="448,63,535,89"/>
+<area shape="rect" id="node5" href="$game_8c.html#accf20527eb893df42de9caab367d8cbf" title=" " alt="" coords="293,100,400,127"/>
+<area shape="rect" id="node6" href="$game_8c.html#abfbee20b241e7d5bbbef9ab36fb201a4" title=" " alt="" coords="163,100,245,127"/>
+<area shape="rect" id="node7" href="$proj_8c.html#a2a16f651eccbd248e1ad3b3b924b143b" title=" " alt="" coords="5,100,115,127"/>
+<area shape="rect" id="node9" href="$menu_8c.html#a0533d8a17655a42328d57d705e7759d1" title="refreshes the menu screen with the update mouse position" alt="" coords="593,139,724,165"/>
+<area shape="rect" id="node10" href="$game_8c.html#ad209d47184f4f1b4f5be0fa5ef6c7557" title=" " alt="" coords="458,125,525,152"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="drawBoard" name="drawBoard">
+<area shape="rect" id="node1" title="draws leaderboard" alt="" coords="444,5,527,32"/>
+<area shape="rect" id="node2" href="$leaderboard_8c.html#a1185563e5dae56100003d25db673383b" title="draws background of leaderboard" alt="" coords="293,5,396,32"/>
+<area shape="rect" id="node3" href="$game_8c.html#abfbee20b241e7d5bbbef9ab36fb201a4" title=" " alt="" coords="163,5,245,32"/>
+<area shape="rect" id="node4" href="$proj_8c.html#a2a16f651eccbd248e1ad3b3b924b143b" title=" " alt="" coords="5,5,115,32"/>
+</map>

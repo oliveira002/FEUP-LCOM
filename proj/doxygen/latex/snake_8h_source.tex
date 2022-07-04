@@ -1,0 +1,110 @@
+\hypertarget{snake_8h_source}{}\doxysection{snake.\+h}
+\label{snake_8h_source}\index{C:/Users/Rui Andrade/Documents/MINIX-\/LCOM/Minix Shared Folder/g04/proj/src/snake.h@{C:/Users/Rui Andrade/Documents/MINIX-\/LCOM/Minix Shared Folder/g04/proj/src/snake.h}}
+\mbox{\hyperlink{snake_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef \_PLAY\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define \_PLAY\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <lcom/lcf.h>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <stdbool.h>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <stdint.h>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{graphics_8h}{devices/graphics.h}}"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}xpms/up.xpm"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}xpms/left.xpm"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}xpms/brick.xpm"{}}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}xpms/fontS.xpm"{}}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}xpms/broken.xpm"{}}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}xpms/down.xpm"{}}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include "{}xpms/right.xpm"{}}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include "{}xpms/wall.xpm"{}}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include "{}xpms/bgGame.xpm"{}}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include "{}xpms/fruit.xpm"{}}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include "{}xpms/bodySnake.xpm"{}}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{kbc_keys_8h}{kbcKeys.h}}"{}}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{leaderboard_8h}{leaderboard.h}}"{}}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#define PIXELOFFSET 48}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#define SNAKEMAXSIZE 864}}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{29 \textcolor{keyword}{enum} \mbox{\hyperlink{snake_8h_a2de8c9bbfd128df445674f33159f1abf}{SnakeBodyType}}\{}
+\DoxyCodeLine{30   \mbox{\hyperlink{snake_8h_a2de8c9bbfd128df445674f33159f1abfa0b0955668575b21eb0ab2272aef49f76}{HEAD}},}
+\DoxyCodeLine{31   \mbox{\hyperlink{snake_8h_a2de8c9bbfd128df445674f33159f1abfa40adb6a513bd35c0dfff0291e9fdaa63}{BODY}},}
+\DoxyCodeLine{32   \mbox{\hyperlink{snake_8h_a2de8c9bbfd128df445674f33159f1abfa4c28487b052a2b05f3db4dc5a722b1d7}{TAIL}},}
+\DoxyCodeLine{33   \mbox{\hyperlink{snake_8h_a2de8c9bbfd128df445674f33159f1abfa0b8b1c61f47cbfec80874fa75b86ea0f}{NULLBODY}}}
+\DoxyCodeLine{34 \};}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{40 \textcolor{keyword}{enum} \mbox{\hyperlink{snake_8h_a842c5e2e69277690b064bf363c017980}{ObjectType}}\{}
+\DoxyCodeLine{41   \mbox{\hyperlink{snake_8h_a842c5e2e69277690b064bf363c017980a61dca5db46c7857556e7eaced30c879b}{FRUIT}},}
+\DoxyCodeLine{42   \mbox{\hyperlink{snake_8h_a842c5e2e69277690b064bf363c017980a02fc27068fe9a3c151ffcc08ec5bb65d}{BLOCK}},}
+\DoxyCodeLine{43   \mbox{\hyperlink{snake_8h_a842c5e2e69277690b064bf363c017980aeb30bf699a39ea2cb5819381461ee54d}{BROKEN}},}
+\DoxyCodeLine{44 \};}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{54 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_object__t}{Object\_t}}}
+\DoxyCodeLine{55 \{}
+\DoxyCodeLine{56   \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_object__t_a4976a71fdb2decf241638a0f59282830}{x}};}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58   \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_object__t_abc568938fc0a2184a96b512c1793e059}{y}};}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60   \textcolor{keyword}{enum} \mbox{\hyperlink{snake_8h_a842c5e2e69277690b064bf363c017980}{ObjectType}} \mbox{\hyperlink{struct_object__t_ade6373a559629960f0a8fbe8c595f38d}{type}};}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62   \textcolor{keywordtype}{bool} \mbox{\hyperlink{struct_object__t_a5d9c79a729204f2cfa667592cc4039db}{active}};}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64 \}\mbox{\hyperlink{snake_8h_aee6fe5e4f0040f46c849d2bd3ac3ceca}{Object}};}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66 }
+\DoxyCodeLine{77 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_snake__t}{Snake\_t}}}
+\DoxyCodeLine{78 \{}
+\DoxyCodeLine{79   \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_snake__t_af0d74b146000ecc71a6d9c7e272235b0}{y}};}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81   \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_snake__t_a65a601aec34ae5f24cc2e9b925e28b65}{x}};}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{83   \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_snake__t_aa36bdd63025caba68ef4e513494d3ec2}{bodySize}};}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85   \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_snake__t_af370382f50989f75e8e921c1fd50b824}{bodyX}}[1000];}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87   \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_snake__t_af0d46935c101b454b5fde5d62f05e1a5}{bodyY}}[1000];}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89   \textcolor{keyword}{enum} \mbox{\hyperlink{snake_8h_a2de8c9bbfd128df445674f33159f1abf}{SnakeBodyType}} \mbox{\hyperlink{struct_snake__t_a2a6ae3f9d1d4fdabdbd4cfb834c96535}{bodyType}};}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91 \}\mbox{\hyperlink{snake_8h_a0791245f0bc890530f6366f1f0e9de9d}{SnakeBody}};}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{97 \textcolor{keywordtype}{void} \mbox{\hyperlink{snake_8h_a47ef13939f66d01657db71355518bf95}{InterruptHandlerTimer}}();}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{102 \textcolor{keywordtype}{void} \mbox{\hyperlink{snake_8h_afcdde9b4c6f02cd996f37a059d6d1235}{MenuStarter}}();}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{107 \textcolor{keywordtype}{void} \mbox{\hyperlink{snake_8h_a37a1a64726df563c1615e713289a30bd}{spawnFruits}}();}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{112 \textcolor{keywordtype}{void} \mbox{\hyperlink{snake_8h_a4f4cdc5a6b882a5f3d7776e40a2fa505}{drawSnake}}();}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{117 \textcolor{keywordtype}{void} \mbox{\hyperlink{snake_8h_a792623332c8199451999b1d06c4b2e16}{moveSnake}}();}
+\DoxyCodeLine{118 }
+\DoxyCodeLine{123 \textcolor{keywordtype}{void} \mbox{\hyperlink{snake_8h_a8801961ce0ec8ab368c8cfe262f2b429}{InterruptHandlerKBC}}(\textcolor{keyword}{enum} \mbox{\hyperlink{kbc_keys_8h_a6ae70ce7b1b294c469f11cbabb8f30d6}{KEY}} k);}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{128 \textcolor{keywordtype}{void} \mbox{\hyperlink{snake_8h_af5808b10d2bfc050eb76e8d07055f46e}{drawObjects}}();}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{133 \textcolor{keywordtype}{void} \mbox{\hyperlink{snake_8h_a01311dd183a0158bb4da61b69ac2fb0a}{drawBG}}();}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{139 \textcolor{keywordtype}{int} \mbox{\hyperlink{snake_8h_a8ebc9c9154b6c78948850b34b555d1e7}{CheckColisions}}();}
+\DoxyCodeLine{140 }
+\DoxyCodeLine{144 \textcolor{keywordtype}{void} \mbox{\hyperlink{snake_8h_a1439c359b287c19809ed0f5e128d57bb}{updateMov}}();}
+\DoxyCodeLine{145 }
+\DoxyCodeLine{149 \textcolor{keywordtype}{void} \mbox{\hyperlink{snake_8h_a175191134328c8902595d554281ddb19}{cleanAllBG}}();}
+\DoxyCodeLine{150 }
+\DoxyCodeLine{154 \textcolor{keywordtype}{void} \mbox{\hyperlink{snake_8h_a25dc2ca4d9df92524e8563f3f67d6d28}{InterruptHandlerMouse}}();}
+\DoxyCodeLine{155 }
+\DoxyCodeLine{162 \textcolor{keywordtype}{bool} \mbox{\hyperlink{snake_8h_a9445ad680de846efddde3d4a52110377}{checkFruit}}(\textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y);}
+\DoxyCodeLine{163 }
+\DoxyCodeLine{169 \textcolor{keywordtype}{void} \mbox{\hyperlink{snake_8h_aff2507557a8a3f3404211ab3f215cace}{initBlock}}(\textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y);}
+\DoxyCodeLine{170 }
+\DoxyCodeLine{174 \textcolor{keywordtype}{void} \mbox{\hyperlink{snake_8h_a375107b888bb3c4258b6178824958287}{startBlocks}}();}
+\DoxyCodeLine{175 }
+\DoxyCodeLine{176 }
+\DoxyCodeLine{183 \textcolor{keywordtype}{int} \mbox{\hyperlink{snake_8h_a51eb06e541b597eb5a28986220b5619c}{findIdxBlock}}(\textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y);}
+\DoxyCodeLine{184 }
+\DoxyCodeLine{189 \textcolor{keywordtype}{int} \mbox{\hyperlink{snake_8h_a23bc8b5691d42ef613230b1f636b413c}{GameOverLeaderBoard}}();}
+\DoxyCodeLine{190 }
+\DoxyCodeLine{194 \textcolor{keywordtype}{void} \mbox{\hyperlink{snake_8h_af895200eed6c62b16871ef2d233a3489}{drawScore}}();}
+\DoxyCodeLine{195 }
+\DoxyCodeLine{196 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

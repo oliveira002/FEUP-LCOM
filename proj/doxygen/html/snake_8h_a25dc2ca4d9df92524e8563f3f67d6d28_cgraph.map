@@ -1,0 +1,7 @@
+<map id="InterruptHandlerMouse" name="InterruptHandlerMouse">
+<area shape="rect" id="node1" title="Function to handle mouse interrupts when the gameState is PLAY_SOLO. Takes care of the left click and..." alt="" coords="5,56,157,83"/>
+<area shape="rect" id="node2" href="$snake_8c.html#a9445ad680de846efddde3d4a52110377" title="Function to check if there is a fruit in the specified position." alt="" coords="210,5,293,32"/>
+<area shape="rect" id="node3" href="$graphics_8c.html#a98bdad3662edea366e432270b278cc4b" title="Clears the XPM on the screen by paiting the background." alt="" coords="215,56,287,83"/>
+<area shape="rect" id="node5" href="$snake_8c.html#a51eb06e541b597eb5a28986220b5619c" title="Function responsible for returning the idx of the specified block in its array." alt="" coords="205,107,297,133"/>
+<area shape="rect" id="node4" href="$graphics_8c.html#a08c498ffeb0a3962e3b7711b57397741" title=" " alt="" coords="345,56,448,83"/>
+</map>

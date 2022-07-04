@@ -1,0 +1,157 @@
+\hypertarget{pause_8c}{}\doxysection{C\+:/\+Users/\+Rui Andrade/\+Documents/\+MINIX-\/\+LCOM/\+Minix Shared Folder/g04/proj/src/pause.c File Reference}
+\label{pause_8c}\index{C:/Users/Rui Andrade/Documents/MINIX-\/LCOM/Minix Shared Folder/g04/proj/src/pause.c@{C:/Users/Rui Andrade/Documents/MINIX-\/LCOM/Minix Shared Folder/g04/proj/src/pause.c}}
+{\ttfamily \#include \char`\"{}pause.\+h\char`\"{}}\newline
+Include dependency graph for pause.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pause_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{pause_8c_a4eae9a915fdabd3b7ce5da6ba01eb9f4}{Pause\+Timer\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em calls function that draws highlighted option if there is any \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{pause_8c_a54e1e892c6677c35be1f65110908f206}{Pause\+Handler\+KBC}} (enum \mbox{\hyperlink{kbc_keys_8h_a6ae70ce7b1b294c469f11cbabb8f30d6}{KEY}} k)
+\begin{DoxyCompactList}\small\item\em is responsible for keeping track of the selected options and changes gamestate if it is chosen \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{pause_8c_a6fd7f58fd5b1307fedba51ee0c61adb4}{draw\+Pause}} (int opt)
+\begin{DoxyCompactList}\small\item\em draws highlighted option \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{pause_8c_a03fe0580b9c5370d92d4591109cdfbba}{option\+Pause}} = 0
+\item 
+enum \mbox{\hyperlink{kbc_keys_8h_a275a67132f10277ada3a0ee3d616b647}{STATE}} \mbox{\hyperlink{pause_8c_ac76be68b581c92c04b6492acdd14fa77}{Game\+State}}
+\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{pause_8c_acdaef098992dcd04a5806427c5210678}{resume}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{pause_8c_a31f2d2592ce30d9f7f5afe15f1df2d7d}{img\+Resume}}
+\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{pause_8c_a22b743988d80f20ffcd468974028e823}{pause\+Exit}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{pause_8c_ae95cf260356632b52e87d8edafc72d27}{img\+Pause\+Exit}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{pause_8c_a6fd7f58fd5b1307fedba51ee0c61adb4}\label{pause_8c_a6fd7f58fd5b1307fedba51ee0c61adb4}} 
+\index{pause.c@{pause.c}!drawPause@{drawPause}}
+\index{drawPause@{drawPause}!pause.c@{pause.c}}
+\doxysubsubsection{\texorpdfstring{drawPause()}{drawPause()}}
+{\footnotesize\ttfamily void draw\+Pause (\begin{DoxyParamCaption}\item[{int}]{opt }\end{DoxyParamCaption})}
+
+
+
+draws highlighted option 
+
+
+\begin{DoxyParams}{Parameters}
+{\em opt} & -\/ option selected in the menu \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pause_8c_a6fd7f58fd5b1307fedba51ee0c61adb4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pause_8c_a6fd7f58fd5b1307fedba51ee0c61adb4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{pause_8c_a54e1e892c6677c35be1f65110908f206}\label{pause_8c_a54e1e892c6677c35be1f65110908f206}} 
+\index{pause.c@{pause.c}!PauseHandlerKBC@{PauseHandlerKBC}}
+\index{PauseHandlerKBC@{PauseHandlerKBC}!pause.c@{pause.c}}
+\doxysubsubsection{\texorpdfstring{PauseHandlerKBC()}{PauseHandlerKBC()}}
+{\footnotesize\ttfamily void Pause\+Handler\+KBC (\begin{DoxyParamCaption}\item[{enum \mbox{\hyperlink{kbc_keys_8h_a6ae70ce7b1b294c469f11cbabb8f30d6}{KEY}}}]{k }\end{DoxyParamCaption})}
+
+
+
+is responsible for keeping track of the selected options and changes gamestate if it is chosen 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & -\/ key pressed by user \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pause_8c_a54e1e892c6677c35be1f65110908f206_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{pause_8c_a4eae9a915fdabd3b7ce5da6ba01eb9f4}\label{pause_8c_a4eae9a915fdabd3b7ce5da6ba01eb9f4}} 
+\index{pause.c@{pause.c}!PauseTimerHandler@{PauseTimerHandler}}
+\index{PauseTimerHandler@{PauseTimerHandler}!pause.c@{pause.c}}
+\doxysubsubsection{\texorpdfstring{PauseTimerHandler()}{PauseTimerHandler()}}
+{\footnotesize\ttfamily void Pause\+Timer\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+calls function that draws highlighted option if there is any 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pause_8c_a4eae9a915fdabd3b7ce5da6ba01eb9f4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pause_8c_a4eae9a915fdabd3b7ce5da6ba01eb9f4_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{pause_8c_ac76be68b581c92c04b6492acdd14fa77}\label{pause_8c_ac76be68b581c92c04b6492acdd14fa77}} 
+\index{pause.c@{pause.c}!GameState@{GameState}}
+\index{GameState@{GameState}!pause.c@{pause.c}}
+\doxysubsubsection{\texorpdfstring{GameState}{GameState}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{kbc_keys_8h_a275a67132f10277ada3a0ee3d616b647}{STATE}} Game\+State\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{pause_8c_ae95cf260356632b52e87d8edafc72d27}\label{pause_8c_ae95cf260356632b52e87d8edafc72d27}} 
+\index{pause.c@{pause.c}!imgPauseExit@{imgPauseExit}}
+\index{imgPauseExit@{imgPauseExit}!pause.c@{pause.c}}
+\doxysubsubsection{\texorpdfstring{imgPauseExit}{imgPauseExit}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t img\+Pause\+Exit\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{pause_8c_a31f2d2592ce30d9f7f5afe15f1df2d7d}\label{pause_8c_a31f2d2592ce30d9f7f5afe15f1df2d7d}} 
+\index{pause.c@{pause.c}!imgResume@{imgResume}}
+\index{imgResume@{imgResume}!pause.c@{pause.c}}
+\doxysubsubsection{\texorpdfstring{imgResume}{imgResume}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t img\+Resume\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{pause_8c_a03fe0580b9c5370d92d4591109cdfbba}\label{pause_8c_a03fe0580b9c5370d92d4591109cdfbba}} 
+\index{pause.c@{pause.c}!optionPause@{optionPause}}
+\index{optionPause@{optionPause}!pause.c@{pause.c}}
+\doxysubsubsection{\texorpdfstring{optionPause}{optionPause}}
+{\footnotesize\ttfamily int option\+Pause = 0}
+
+\mbox{\Hypertarget{pause_8c_a22b743988d80f20ffcd468974028e823}\label{pause_8c_a22b743988d80f20ffcd468974028e823}} 
+\index{pause.c@{pause.c}!pauseExit@{pauseExit}}
+\index{pauseExit@{pauseExit}!pause.c@{pause.c}}
+\doxysubsubsection{\texorpdfstring{pauseExit}{pauseExit}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ pause\+Exit\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{pause_8c_acdaef098992dcd04a5806427c5210678}\label{pause_8c_acdaef098992dcd04a5806427c5210678}} 
+\index{pause.c@{pause.c}!resume@{resume}}
+\index{resume@{resume}!pause.c@{pause.c}}
+\doxysubsubsection{\texorpdfstring{resume}{resume}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ resume\hspace{0.3cm}{\ttfamily [extern]}}
+

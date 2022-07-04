@@ -1,0 +1,8 @@
+<map id="checkFruit" name="checkFruit">
+<area shape="rect" id="node1" title="Function to check if there is a fruit in the specified position." alt="" coords="783,5,865,32"/>
+<area shape="rect" id="node2" href="$snake_8c.html#a25dc2ca4d9df92524e8563f3f67d6d28" title="Function to handle mouse interrupts when the gameState is PLAY_SOLO. Takes care of the left click and..." alt="" coords="583,5,735,32"/>
+<area shape="rect" id="node3" href="$game_8c.html#a44e858f7686dc3323d269fe1b22b3d80" title=" " alt="" coords="448,5,535,32"/>
+<area shape="rect" id="node4" href="$game_8c.html#accf20527eb893df42de9caab367d8cbf" title=" " alt="" coords="293,5,400,32"/>
+<area shape="rect" id="node5" href="$game_8c.html#abfbee20b241e7d5bbbef9ab36fb201a4" title=" " alt="" coords="163,5,245,32"/>
+<area shape="rect" id="node6" href="$proj_8c.html#a2a16f651eccbd248e1ad3b3b924b143b" title=" " alt="" coords="5,5,115,32"/>
+</map>
