@@ -1,1 +1,1 @@
-# LCOM 21/22 Labs & Project
+*LCOM 21/22 Labs & Project
