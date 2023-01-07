@@ -1,4 +1,6 @@
 # LCOM 21/22 Labs & Project
 ~ careful with plagiarism
 
-~ project grade 13.91/20 (snake game)
+| | Project |
+| --- | --- |
+| Grade | **13.91** | 
